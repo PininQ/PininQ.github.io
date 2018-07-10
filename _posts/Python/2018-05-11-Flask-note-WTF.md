@@ -62,7 +62,7 @@ CSRF_ENABLED是为了CSRF（跨站请求伪造）保护。SECRET_KEY用来生成
 
 **在HTML页面中直接写form表单：**
 
-```
+```html
 <form method="post">
     <label>用户名:</label><input type="text" name="username"> <br>
     <label>密码:</label><input type="password" name="password"> <br>

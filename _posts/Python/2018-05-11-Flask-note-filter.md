@@ -109,7 +109,7 @@ keywords: Python, Flask, 过滤器
 
 #### 语句块过滤
 
-```
+```html
 {% filter upper %}
     一大堆文字
 {% endfiletr %}
