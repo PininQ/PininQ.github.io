@@ -1,23 +1,18 @@
 - name: 码志
   url: http://mazhuang.org
 
-- name: Connie 酱
-  url: https://connie99.github.io
+- name: V2EX
+  url: http://jp.v2ex.com/
 
-- name: 只宁静不致远
-  url: http://zxning.github.io
+- name: stackoverflow
+  url: https://stackoverflow.com/
 
-- name: Blog Something
-  url: http://chenxiaoyoyo.github.io
+- name: segmentfault
+  url: https://segmentfault.com/
 
-- name: 日新亭
-  url: http://www.fengerzh.com/
+- name: 德问
+  url: http://www.dewen.net.cn/
 
-- name: 尧哥
-  url: http://www.shishuyao.com
+- name: Ruby China
+  url: https://ruby-china.org/topics
 
-- name: 叮咚购
-  url: http://www.ringwang.com/
-
-- name: wanandroid
-  url: http://www.wanandroid.com/
