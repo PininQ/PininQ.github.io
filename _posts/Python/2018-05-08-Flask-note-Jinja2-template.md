@@ -53,7 +53,10 @@ keywords: Python, Flask, Jinja2
 {{ post.title }}
 ```
 
+
 Jinja2模板中的变量代码块可以是任意Python类型或者对象，只要它能够被Python的str()方法转换为一个字符串就可以，比如，可以通过下面的方式显示一个字典或者列表中的某个元素：
+
+
 ```
 {{ your_dict['key'] }}
 {{ your_list[0] }}
