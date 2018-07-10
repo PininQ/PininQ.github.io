@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://qinbin.top/
+url: https://qinbin.top/
 date_format: "ordinal"
 title: "小花椒"
 subtitle: "三旬尚远浓烟散，一如年少迟夏归。"
@@ -16,7 +16,7 @@ side_bar_repo_limit: 5
 #      Author      #
 # ---------------- #
 author: Bin Qin
-organization: xhuajiao.top
+organization: "小花椒视频网站"
 organization_url: https://www.xhuajiao.top
 github_username: qinbin52qiul
 location: Guangzhou, China
