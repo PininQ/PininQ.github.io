@@ -7,6 +7,7 @@ keywords: Python, Flask, SQLAlchemy
 ---
 
 
+
 ### Flask-SQLAlchemy扩展
 
 - SQLAlchemy实际上是对数据库的抽象，让开发者不用直接和SQL语句打交道，而是通过Python对象来操作数据库，在舍弃一些性能的开销的同时，换来的是开发效率的较大提升。
@@ -50,20 +51,20 @@ app.config['SQLALCHEMY_ECHO'] = True
 
 <table>
   <tr>
-    <th width=249, bgcolor=yellow >名字</th>
-    <th bgcolor=yellow>备注</th>
+    <th>名字</th>
+    <th>备注</th>
   </tr>
   <tr>
-    <td bgcolor=#eeeeee> SQLALCHEMY_DATABASE_URI </td>
+    <td> SQLALCHEMY_DATABASE_URI </td>
     <td> 用于连接的数据库URI。例如：sqlite:////tmp/test.dbmysql://username:password@server/db</td>
 
   </tr>
   <tr>
-    <td bgcolor=#00FF00>SQLALCHEMY_BINDS </td>
+    <td>SQLALCHEMY_BINDS </td>
     <td> 一个映射binds到链接URI的字典。更多binds的信息见用Binds操作多个数据库 </td>
 
   <tr>
-    <td bgcolor=rgb(0,10,0)>SQLALCHEMY_ECHO </td>
+    <td>SQLALCHEMY_ECHO </td>
     <td> 如果设置为True，SQLAlchemy会记录所有发给stderr的语句，这对调试有用。（打印sql语句）</td>
 
   </tr>
