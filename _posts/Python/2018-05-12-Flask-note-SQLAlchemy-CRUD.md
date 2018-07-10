@@ -18,7 +18,7 @@ keywords: Python, Flask, SQLAlchemy
     - 最基本的查询时返回表中所有数据，可以通过过滤器进行更精确的数据库查询。
 
 
-```python
+```Python
 db.session.add(role)       # 添加到数据库的session中
 db.session.add_all([user1, user2]) # 添加多个信息到session中
 db.session.commit()        # 提交数据库的修改（包括增/删/改）
@@ -33,7 +33,7 @@ db.session.delete(user)    # 删除数据库（需要跟上commit）
 
 - **Flask_SQLAlchemy_demo.py如下：**
 
-```python
+```Python
 # -*- coding:utf-8 -*-
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -275,7 +275,7 @@ User.query.filter(User.id==4).first()    # 对象名.属性 ==
 ---
 
 **代码如下：**
-```
+```Python
 # -*- coding:utf-8 -*-
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
