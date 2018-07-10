@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flask学习笔记1--Flask程序Hello world例子
-categories: Python
+categories: Flask
 description: Hello world
 keywords: Python, Flask
 ---
@@ -37,8 +37,6 @@ app = Flask(__name__)
 
  
 
-
-
 **代码如下：**
 ```python
 # -*- coding:utf-8 -*-
@@ -64,4 +62,8 @@ if __name__ == '__main__':
     app.run()
     
 ```
+
+程序运行结果如下：
+
+![访问127.0.0.1:8000](/images/posts/flask/flaskhelloworld.png)
 
