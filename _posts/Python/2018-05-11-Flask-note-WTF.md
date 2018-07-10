@@ -93,7 +93,7 @@ app.secret_key = 'qinbin'
 '''
 给模板传递消息
 flash --> 需要对内容加密。因此需要设置secret_key，做加密消息的混淆
-'''
+'''Python
 @app.route('/', methods=['GET', 'POST'])
 def index():
     # request:请求对象 --> 获取请求方式、数据
@@ -138,7 +138,7 @@ if __name__ == '__main__':
 ```
 **视图函数**
 
-```
+```Python
 # -*- coding: utf-8 -*-
 __author__ = 'QB'
 
