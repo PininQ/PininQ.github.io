@@ -302,9 +302,9 @@ if __name__ == '__main__':
     {{ form.book.label }}{{ form.book }} <br>
     {{ form.submit }} <br>
     {#  显示消息闪现的内容  #}
-    {% for message in get_flashed_messages() %}
+    { % for message in get_flashed_messages() % }
         {{ message }}
-    {% endfor %}
+    { % endfor % }
 
 </form>
 
@@ -312,16 +312,16 @@ if __name__ == '__main__':
 
 {#先遍历作者，然后在作者里面遍历书籍#}
 <ul>
-    {% for author in authors %}
+    { % for author in authors % }
         <li>{{ author.name }}/<a href="{{ url_for('delete_author', author_id=author.id) }}">删除</a></li>
         <ul>
-            {% for book in author.books %}
+            { % for book in author.books % }
                 <li>《{{ book.name }}》/<a href="{{ url_for('delete_book', book_id=book.id) }}">删除</a></li>
-            {% else %}
+            { % else % }
                 <li>无</li>
-            {% endfor %}
+            { % endfor % }
         </ul>
-    {% endfor %}
+    { % endfor % }
 
 </ul>
 

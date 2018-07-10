@@ -68,9 +68,9 @@ CSRF_ENABLED是为了CSRF（跨站请求伪造）保护。SECRET_KEY用来生成
     <label>密码:</label><input type="password" name="password"> <br>
     <label>确认密码:</label><input type="password" name="password2"> <br>
     <input type="submit" value="提交"> <br>
-    {% for message in get_flashed_messages() %}
+    { % for message in get_flashed_messages() % }
         {{ message }}
-    {% endfor %}
+    { % endfor % }
 </form>
 ```
 **视图函数中获取表单数据：**
