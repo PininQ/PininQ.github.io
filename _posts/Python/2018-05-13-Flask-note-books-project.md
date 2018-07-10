@@ -6,7 +6,7 @@ description: Flask的综合小案例，包含基本的CRUD操作
 keywords: Python, Flask
 ---
 
-
+### Flask的综合小案例
 
 1. 配置数据库
     1. 导入SQLAlchemy扩展
