@@ -1,6 +1,6 @@
 # 小花椒
 
-我的个人博客：<http://qinbin.top>，欢迎 Star 和 Fork。
+我的个人博客：<https://qinbin.top>，欢迎 Star 和 Fork。
 
 ## 概览
 
@@ -16,7 +16,7 @@
 
 ## 效果预览
 
-**[在线预览 &rarr;](http://qinbin.top)**
+**[在线预览 &rarr;](https://qinbin.top)**
 
 ![screenshot home](https://mazhuang.org/assets/images/screenshots/home.png)
 
