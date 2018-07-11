@@ -18,7 +18,7 @@
 
 **[在线预览 &rarr;](https://qinbin.top)**
 
-![screenshot home](https://mazhuang.org/assets/images/screenshots/home.png)
+![screenshot home](https://qinbin/assets/images/screenshots/home.png)
 
 ## Fork 指南
 
