@@ -32,7 +32,7 @@ permalink: /about/
 {% endfor %}
 
 --- 
-# 简历
+# 求职简历
 
 - 手机：18878475439
 - Email：2538323140@qq.com
@@ -43,9 +43,9 @@ permalink: /about/
  - 覃斌 / 男 / 1994
  - 本科 / 贺州学院 · 数学与计算机学院 · 软件工程
  - 工作年限：1 年
- - 技术博客：https://qinbin.top
- - CSDN 博客：https://blog.csdn.net/qq_34081993
- - GitHub：https://github.com/qinbin52qiul
+ - 技术博客：[https://qinbin.top](https://qinbin.top)
+ - CSDN 博客：[https://blog.csdn.net/qq_34081993](https://blog.csdn.net/qq_34081993)
+ - GitHub：[https://github.com/qinbin52qiul](https://github.com/qinbin52qiul)
 
  - 期望职位：Python 开发工程师
  - 期望薪资：税前月薪 5k~8k，特别喜欢的公司可例外
@@ -84,7 +84,7 @@ permalink: /about/
  - 开发工具：Pycharm + Navicat Premium 12 + RedisDesktopManager + SecureCRT
  - 所用技术：Python、Flask、Redis、MariaDB、HTML、CSS、Javascript、JQuery、Ajax、Bootstrap、Vue.js
  - 项目简介：小花椒网站是一个基于 Flask 框架而搭建的视频网站。网站前台使用了 DPlayer 和 jwplayer 两个播放器，可添加视频弹幕，弹幕存放于服务器中的 Redis 中。评论功能采用了 ueditor 编辑器。还可以收藏电影、查看 Ta 动态等等。网站后台主要是对 MariaDB 的 CRUD 操作。网站部署在 CentOS7 环境下，部署配置为 Flask + uwsgi + Nginx + Supervisor。
-- 网站地址：https://www.xhuajiao.top
+- 网站地址：[https://www.xhuajiao.top](https://www.xhuajiao.top)
 - 项目总结：使得自己对 Flask 框架有了一个更深的了解。
 
 ### 桂林旅游路线的智能数据分析（2018年2月~2018年4月）
