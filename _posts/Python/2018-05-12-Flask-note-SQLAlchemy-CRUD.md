@@ -16,7 +16,7 @@ keywords: Python, Flask, SQLAlchemy
     - 最基本的查询时返回表中所有数据，可以通过过滤器进行更精确的数据库查询。
 
 
-```Python
+```python
 db.session.add(role)       # 添加到数据库的session中
 db.session.add_all([user1, user2]) # 添加多个信息到session中
 db.session.commit()        # 提交数据库的修改（包括增/删/改）
@@ -31,7 +31,7 @@ db.session.delete(user)    # 删除数据库（需要跟上commit）
 
 **Flask_SQLAlchemy_demo.py如下：**
 
-```Python
+```python
 # -*- coding:utf-8 -*-
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -100,9 +100,10 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 ```
-#### 2.2在终端进行增删改操作：**
 
-```
+#### 2.2在终端进行增删改操作：
+
+```python
 >>> from Flask_SQLAlchemy_demo import *
 
 添加一条Role数据
@@ -131,7 +132,7 @@ if __name__ == '__main__':
 
 #### 3.1 一对多
 
-```
+```python
 class Role(db.Model):
     ...
     # 关键代码
@@ -168,7 +169,7 @@ In [8]: db.session.commit()
 ```
 
 2. 实现关系引用查询
-```Python
+```python
 In [9]: role.users
 Out[9]: [<User: zs 1 None None>, <User: ls 2 None None>]
 
@@ -246,7 +247,7 @@ db.session.commit()
 
 #### 2.3 查询练习如下
 
-```Python
+```python
 1. 查询所有用户数据
 # all()返回查询到的所有对象
 User.query.all()
@@ -268,7 +269,7 @@ User.query.filter(User.id==4).first()    # 对象名.属性 ==
 
 
 **代码如下：**
-```Python
+```python
 # -*- coding:utf-8 -*-
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -364,7 +365,7 @@ if __name__ == '__main__':
 
 **操作过程如下：**
 
-```Python
+```python
 In [1]: from Flask_SQLAlchemy_demo import *
 
 In [2]: User.query.all()
@@ -403,7 +404,7 @@ Out[7]: <User: su 4 su@163.com 434323>
 ```
 
 **flask_sql_demo数据库中的数据**
-```SQL
+```sql
 mysql> select * from roles;
 +----+-------+
 | id | name  |

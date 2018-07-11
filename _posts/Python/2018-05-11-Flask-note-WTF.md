@@ -73,7 +73,7 @@ CSRF_ENABLED是为了CSRF（跨站请求伪造）保护。SECRET_KEY用来生成
 </form>
 ```
 **视图函数中获取表单数据：**
-```Python
+```python
 # -*- coding:utf-8 -*-
 
 from flask import Flask, render_template, request, flash
@@ -126,7 +126,7 @@ if __name__ == '__main__':
 ### 示例-使用Flask-WTF实现表单
 
 **模板页面**
-```
+```html
 <form method="post">
     {#设置csrf_token#}
     {{ form.csrf_token() }}
@@ -137,7 +137,7 @@ if __name__ == '__main__':
 ```
 **视图函数**
 
-```Python
+```python
 # -*- coding: utf-8 -*-
 __author__ = 'QB'
 
