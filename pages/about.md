@@ -43,10 +43,9 @@ permalink: /about/
  - 覃斌 / 男 / 1994
  - 本科 / 贺州学院 · 数学与计算机学院 · 软件工程
  - 工作年限：1 年
- - 技术博客：[https://qinbin.top](https://qinbin.top)
- - CSDN 博客：[https://blog.csdn.net/qq_34081993](https://blog.csdn.net/qq_34081993)
  - GitHub：[https://github.com/qinbin52qiul](https://github.com/qinbin52qiul)
-
+ - 技术博客（有道云笔记搬迁中）：[https://qinbin.top](https://qinbin.top)
+ - CSDN 博客：[https://blog.csdn.net/qq_34081993](https://blog.csdn.net/qq_34081993)
  - 期望职位：Python 开发工程师
  - 期望薪资：税前月薪 5k~8k，特别喜欢的公司可例外
  - 期望城市：广州
