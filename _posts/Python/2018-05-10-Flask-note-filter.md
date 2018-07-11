@@ -15,7 +15,7 @@ keywords: Python, Flask, 过滤器
 
 - 过滤器的使用方式为：变量名 | 过滤器
 ```
-{{ variable | filter_name(*args) } }
+{ { variable | filter_name(*args) } }
 ```
 
 - 如果没有任何参数传递给过滤器，则可以把括号省略掉
