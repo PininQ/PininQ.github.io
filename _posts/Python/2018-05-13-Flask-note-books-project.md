@@ -6,32 +6,32 @@ description: Flask的综合小案例，包含基本的CRUD操作
 keywords: Python, Flask
 ---
 
-### Flask的综合小案例
+### Flask 的综合小案例
 
 1. 配置数据库
-    1. 导入SQLAlchemy扩展
-    1. 创建db对象，并配置参数
+    1. 导入 SQLAlchemy 扩展
+    1. 创建 db 对象，并配置参数
     1. 终端创建数据库
 1. 添加书和作者模型
-    1. 模型继承db.Model
+    1. 模型继承 db.Model
     1. \_\_tablename\_\_：表名
     1. db.Column：字段
     1. db.relationship：关系引用
 1. 添加数据
 1. 使用模板显示数据库查询的数据
     1. 查询所有的作者信息，让信息传递给模板
-    1. 模板中按照格式，依次for循环作者和书籍即可(作者获取书籍，用的是关系引用)
-1. 使用WTF显示表单
+    1. 模板中按照格式，依次 for 循环作者和书籍即可(作者获取书籍，用的是关系引用)
+1. 使用 WTF 显示表单
     1. 自定义表单类
     1. 模板中显示
     1. secret_key / 编码问题 / csrf_token
 1. 实现相关的增删逻辑
     1. 增加数据
-    1. 删除书籍 --> 网页中删除 --> 点击需要发送书籍的ID给删除书籍的路由 --> 路由需要接收参数
-    1. 删除书籍 url_for的使用 / for else的使用 / redirect的使用
+    1. 删除书籍 --> 网页中删除 --> 点击需要发送书籍的 ID 给删除书籍的路由 --> 路由需要接收参数
+    1. 删除书籍 url_for 的使用 / for else 的使用 / redirect 的使用
     1. 删除作者
 
-**`Flask_books_project.py`文件**
+**`Flask_books_project.py` 文件**
 
 ```python
 # -*- coding:utf-8 -*-
@@ -58,26 +58,26 @@ app.secret_key = 'qinbin'
 db = SQLAlchemy(app)
 '''
 1. 配置数据库
-    a. 导入SQLAlchemy扩展
-    b. 创建db对象，并配置参数
+    a. 导入 SQLAlchemy 扩展
+    b. 创建 db 对象，并配置参数
     c. 终端创建数据库
 2. 添加书和作者模型
-    a. 模型继承db.Model
-    b. __tablename__:表名
-    c. db.Column:字段
-    d. db.relationship:关系引用
+    a. 模型继承 db.Model
+    b. __tablename__: 表名
+    c. db.Column: 字段
+    d. db.relationship: 关系引用
 3. 添加数据
 4. 使用模板显示数据库查询的数据
     a. 查询所有的作者信息，让信息传递给模板
-    b. 模板中按照格式，依次for循环作者和书籍即可(作者获取书籍，用的是关系引用)
-5. 使用WTF显示表单
+    b. 模板中按照格式，依次 for 循环作者和书籍即可(作者获取书籍，用的是关系引用)
+5. 使用 WTF 显示表单
     a. 自定义表单类
     b. 模板中显示
     c. secret_key / 编码问题 / csrf_token
 6. 实现相关的增删逻辑
     a. 增加数据
-    b. 删除书籍 --> 网页中删除 --> 点击需要发送书籍的ID给删除书籍的路由 --> 路由需要接收参数
-       删除书籍 url_for的使用 / for else的使用 / redirect的使用
+    b. 删除书籍 --> 网页中删除 --> 点击需要发送书籍的 ID 给删除书籍的路由 --> 路由需要接收参数
+       删除书籍 url_for 的使用 / for else 的使用 / redirect 的使用
     c. 删除作者
 '''
 
@@ -93,7 +93,7 @@ class Author(db.Model):
     name = db.Column(db.String(16), unique=True)
 
     # 关系引用
-    # books是给自己(Author模型)使用的，author是给Book模型用的
+    # books 是给自己 (Author 模型) 使用的，author 是给 Book 模型用的
     books = db.relationship('Book', backref='author')
 
     def __repr__(self):
@@ -119,10 +119,10 @@ class AddBookForm(FlaskForm):
     submit = SubmitField('提交')
 
 
-# 删除书籍 --> 网页中删除 --> 点击需要发送书籍的ID给删除书籍的路由 --> 路由需要接收参数
+# 删除书籍 --> 网页中删除 --> 点击需要发送书籍的 ID 给删除书籍的路由 --> 路由需要接收参数
 @app.route('/delete_book/<book_id>')
 def delete_book(book_id):
-    # 1. 查询当前数据库，是否有该ID的书，如果有就删除，没有就提示错误
+    # 1. 查询当前数据库，是否有该 ID 的书，如果有就删除，没有就提示错误
     book = Book.query.get(book_id)
 
     # 2. 如果有就删除
@@ -138,8 +138,8 @@ def delete_book(book_id):
         # 3. 没有就提示错误
         flash('没有该书籍')
 
-    # redirect:重定向，需要传入网络/路由地址
-    # url_for('index'):需要传入视图函数名，返回该视图函数对应的路由地址
+    # redirect: 重定向，需要传入网络 / 路由地址
+    # url_for('index'): 需要传入视图函数名，返回该视图函数对应的路由地址
     print url_for('index')
     return redirect(url_for('index'))
 
@@ -152,13 +152,13 @@ def delete_book(book_id):
 @app.route('/delete_author/<author_id>')
 def delete_author(author_id):
 
-    # 查询当前数据库，是否有该ID的作者，如果有就删除(先删书，再删作者)，没有就提示错误
+    # 查询当前数据库，是否有该 ID 的作者，如果有就删除(先删书，再删作者)，没有就提示错误
     # 1. 查询当前数据库
     author = Author.query.get(author_id)
 
     # 2. 如果有就删除(先删书，再删作者)
     if author:
-        # 删除某一作者的书籍的方式1:先查询出所有书籍放到列表中再遍历删除
+        # 删除某一作者的书籍的方式 1: 先查询出所有书籍放到列表中再遍历删除
         # books = Book.query.filter_by(author_id=author.id)
         # for book in books:
         #     if book:
@@ -173,7 +173,7 @@ def delete_author(author_id):
         #         # 3. 没有就提示错误
         #         flash('没有该书籍')
         try:
-            # 删除某一作者的书籍的方式2:查询之后直接删除
+            # 删除某一作者的书籍的方式 2: 查询之后直接删除
             Book.query.filter_by(author_id=author.id).delete()
 
             # 删除作者
@@ -195,7 +195,7 @@ def index():
 
     '''
     验证逻辑：
-    1. 调用WTF的函数实现验证
+    1. 调用 WTF 的函数实现验证
     2. 验证通过获取数据
     3. 判断作者是否存在
     4. 如果作者存在，判断书籍是否存在，没有重复书籍就添加数据，如果重复就提示错误
@@ -203,7 +203,7 @@ def index():
     6. 验证不通过就提示错误
     '''
 
-    # 1. 调用WTF的函数实现验证
+    # 1. 调用 WTF 的函数实现验证
     if add_book_form.validate_on_submit():
 
         # 2. 验证通过获取数据
@@ -286,7 +286,7 @@ if __name__ == '__main__':
 
 ```
 
-**`books.html`文件**
+**`books.html` 文件**
 
 ```html
 <!DOCTYPE html>
@@ -310,7 +310,7 @@ if __name__ == '__main__':
 
 <hr>
 
-{#先遍历作者，然后在作者里面遍历书籍#}
+{# 先遍历作者，然后在作者里面遍历书籍 #}
 <ul>
     { % for author in authors % }
         <li>{{ author.name }}/<a href="{{ url_for('delete_author', author_id=author.id) }}">删除</a></li>
@@ -318,7 +318,7 @@ if __name__ == '__main__':
             { % for book in author.books % }
                 <li>《{{ book.name }}》/<a href="{{ url_for('delete_book', book_id=book.id) }}">删除</a></li>
             { % else % }
-                <li>无</li>
+                <li > 无</li>
             { % endfor % }
         </ul>
     { % endfor % }

@@ -7,16 +7,16 @@ keywords: Python, Flask, 过滤器
 ---
 
 
-### Web表单
+### Web 表单
 
-web表单是web应用程序的基本功能。
+web 表单是 web 应用程序的基本功能。
 
-它是HTML页面中负责数据采集的不见。表单由三个部分组成：表单标签、表单域、表单按钮。表单允许用户输入数据，负责HTML页面数据采集，通过表单将用户输入的数据提交给服务器。
+它是 HTML 页面中负责数据采集的不见。表单由三个部分组成：表单标签、表单域、表单按钮。表单允许用户输入数据，负责 HTML 页面数据采集，通过表单将用户输入的数据提交给服务器。
 
-在Flask中，为了处理web表单，我们一般使用Flask-WTF扩展，它封装了WTForms，并且它有验证表单数据的功能。
+在 Flask 中，为了处理 web 表单，我们一般使用 Flask-WTF 扩展，它封装了 WTForms，并且它有验证表单数据的功能。
 
 
-### WTForms支持的HTML标准字段
+### WTForms 支持的 HTML 标准字段
 
 
 字段对象 | 说明
@@ -25,12 +25,12 @@ StringField | 文本字段
 TextAreaField | 多行文本字段
 PasswordField | 密码文本字段
 HiddenField | 隐藏文本字段
-DateField | 文本字段，值为datetime.date文本格式
-DateTimeField | 文本字段，值为datetime.datetime文本格式
+DateField | 文本字段，值为 datetime.date 文本格式
+DateTimeField | 文本字段，值为 datetime.datetime 文本格式
 IntegerField | 文本字段，值为整数
-DecimalField | 文本字段，值为decimal.Decimal
+DecimalField | 文本字段，值为 decimal.Decimal
 FloatDield | 文本字段，值为浮点数
-BooleanField | 复选框，值为True和False
+BooleanField | 复选框，值为 True 和 False
 RadioField | 一组单选框
 SelectField | 下拉列表框
 SelectMutipleField | 下拉列表，可选择多个值
@@ -40,32 +40,32 @@ FormField | 把表单作为字段嵌入另一个表单
 FieldList | 一组指定类型的字段
 
 
-### WTForms常用验证函数
+### WTForms 常用验证函数
 
 
-验证函数| 说明
+验证函数 | 说明
 ---|---
 DataRequried | 确保字段中有数据
 EqualTo | 比较两个字段的值，常用于比较两次密码输入
 Length | 验证输入的字符串长度
 NumberRange | 验证输入的值在数字范围内
-URL | 验证URL
+URL | 验证 URL
 AnyOf | 验证输入值在可选列表中
 NoneOf | 验证输入值不在可选列表中
-使用Flask-WTF需要配置参数SECRET_KEY。
+使用 Flask-WTF 需要配置参数 SECRET_KEY。
 
-CSRF_ENABLED是为了CSRF（跨站请求伪造）保护。SECRET_KEY用来生成加密令牌，当CSRF激活的时候，该设置会根据设置的密匙生成加密令牌。在HTML页面中直接写form表单：
+CSRF_ENABLED 是为了 CSRF（跨站请求伪造）保护。SECRET_KEY 用来生成加密令牌，当 CSRF 激活的时候，该设置会根据设置的密匙生成加密令牌。在 HTML 页面中直接写 form 表单：
 
 
-### 示例-使用普通方式实现表单
+### 示例 - 使用普通方式实现表单
 
-**在HTML页面中直接写form表单：**
+**在 HTML 页面中直接写 form 表单：**
 
 ```html
 <form method="post">
-    <label>用户名:</label><input type="text" name="username"> <br>
-    <label>密码:</label><input type="password" name="password"> <br>
-    <label>确认密码:</label><input type="password" name="password2"> <br>
+    <label > 用户名:</label><input type="text" name="username"> <br>
+    <label > 密码:</label><input type="password" name="password"> <br>
+    <label > 确认密码:</label><input type="password" name="password2"> <br>
     <input type="submit" value="提交"> <br>
     { % for message in get_flashed_messages() % }
         {{ message }}
@@ -83,37 +83,35 @@ app = Flask(__name__)
 app.secret_key = 'qinbin'
 '''
 目的：实现一个简单的登录的逻辑处理
-1.路由需要有get和post两种请求方式 --> 需要判断请求方式
-2.获取请求的参数
-3.判断参数是否填写 & 密码是否相同
-4.如果判断都没有我呢提，就返回一个success
-'''
-
-'''
+1. 路由需要有 get 和 post 两种请求方式 --> 需要判断请求方式
+2. 获取请求的参数
+3. 判断参数是否填写 & 密码是否相同
+4. 如果判断都没有我呢提，就返回一个 success
+''''''
 给模板传递消息
-flash --> 需要对内容加密。因此需要设置secret_key，做加密消息的混淆
+flash --> 需要对内容加密。因此需要设置 secret_key，做加密消息的混淆
 '''Python
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    # request:请求对象 --> 获取请求方式、数据
+    # request: 请求对象 --> 获取请求方式、数据
 
-    # 1.判断请求方式
+    # 1. 判断请求方式
     if request.method == 'POST':
 
-        # 2.获取请求参数
+        # 2. 获取请求参数
         username = request.form.get('username')
         password = request.form.get('password')
         password2 = request.form.get('password2')
 
-        # 3.判断参数是否填写 & 密码是否相同
+        # 3. 判断参数是否填写 & 密码是否相同
         if not all([username, password, password2]):
             # print '参数不完整'
-            flash(u'参数不完整') # flash消息闪现
+            flash(u'参数不完整') # flash 消息闪现
         elif password != password2:
             # print '密码不一致'
             flash(u'密码不一致')
         
-        # 4.没有问题就返回'success'
+        # 4. 没有问题就返回'success'
         else:
             print password
             return 'success'
@@ -123,12 +121,12 @@ def index():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-### 示例-使用Flask-WTF实现表单
+### 示例 - 使用 Flask-WTF 实现表单
 
 **模板页面**
 ```html
 <form method="post">
-    {#设置csrf_token#}
+    {# 设置 csrf_token#}
     {{ form.csrf_token() }}
     {{ form.username.label }}{{ form.username }}<br>
     {{ form.password.label }}{{ form.password }}<br>
@@ -143,13 +141,13 @@ __author__ = 'QB'
 
 from flask import Flask, render_template, request, flash
 
-# 导入wtf扩展的表单类
+# 导入 wtf 扩展的表单类
 from flask_wtf import FlaskForm
 
 # 导入自定义表单需要的字段
 from wtforms import SubmitField, StringField, PasswordField
 
-# 导入wtf扩展高蹄的表单验证器
+# 导入 wtf 扩展高蹄的表单验证器
 from wtforms.validators import DataRequired, EqualTo
 
 # 解决编码问题
@@ -175,7 +173,7 @@ def form():
     register_form = RegisterForm()
 
     if request.method == 'POST':
-        # 调用validate_on_submit方法，可以一次性执行完所有验证函数的逻辑
+        # 调用 validate_on_submit 方法，可以一次性执行完所有验证函数的逻辑
         if register_form.validate_on_submit():
             # 进入这里就表示所有的逻辑都验证成功
             username = request.form.get('username')

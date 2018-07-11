@@ -9,13 +9,13 @@ keywords: Python, Flask, 过滤器
 
 ### 过滤器
 
-过滤器的本质就是函数。有时候我们不仅仅只是需要输出变量的值，我们还需要修改变量的显示，甚至格式化、运算等等，而在模板中是不能直接调用Python中的某些方法，那么这就用到了过滤器。
+过滤器的本质就是函数。有时候我们不仅仅只是需要输出变量的值，我们还需要修改变量的显示，甚至格式化、运算等等，而在模板中是不能直接调用 Python 中的某些方法，那么这就用到了过滤器。
 
 使用方式：
 
-- 过滤器的使用方式为：变量名|过滤器
+- 过滤器的使用方式为：变量名 | 过滤器
 ```
-{ { variable | filter_name(*args) } }
+{{ variable | filter_name(*args) } }
 ```
 
 - 如果没有任何参数传递给过滤器，则可以把括号省略掉
@@ -23,11 +23,11 @@ keywords: Python, Flask, 过滤器
 { { variable | filter_name } }
 ```
 
-- 如：`{ { 'hello' | capitalize } }`，这个过滤器的作用：把变量variable的值的首字母转换为大写，其他字母转换为小写
+- 如：`{ { 'hello' | capitalize } }`，这个过滤器的作用：把变量 variable 的值的首字母转换为大写，其他字母转换为小写
 
 ### 链式调用
 
-在jinja2中，过滤器是可以支持链式调用的，示例如下：
+在 jinja2 中，过滤器是可以支持链式调用的，示例如下：
 ```
 { { "hello world" | reverse | upper } }
 ```
@@ -78,7 +78,7 @@ keywords: Python, Flask, 过滤器
 <p>{ { '%s is %d' | format('name', 17) } }</p>
 ```
 
-- striptags：渲染之前把所有的HTML标签都删掉
+- striptags：渲染之前把所有的 HTML 标签都删掉
 
 ```
 <p>{ { '<em>hello</em>' | striptags } }</p>
