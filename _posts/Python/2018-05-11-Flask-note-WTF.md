@@ -56,9 +56,8 @@ NoneOf | 验证输入值不在可选列表中
 
 CSRF_ENABLED是为了CSRF（跨站请求伪造）保护。SECRET_KEY用来生成加密令牌，当CSRF激活的时候，该设置会根据设置的密匙生成加密令牌。在HTML页面中直接写form表单：
 
-### 示例
 
-#### 使用普通方式实现表单
+### 示例-使用普通方式实现表单
 
 **在HTML页面中直接写form表单：**
 
@@ -124,7 +123,7 @@ def index():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-#### 使用Flask-WTF实现表单
+### 示例-使用Flask-WTF实现表单
 
 **模板页面**
 ```

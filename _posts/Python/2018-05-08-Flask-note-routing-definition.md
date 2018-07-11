@@ -10,7 +10,7 @@ keywords: Python, Flask, 路由
 
 使用methods参数指定可接受的请求方式，可以是多种
 
-```
+```Python
 @app.route('/', methods=['GET','POST'])
 def hello():
     return 'hello,world'
@@ -21,7 +21,7 @@ def hello():
 有时我们需要将同一类URL映射到同一个视图函数处理，比如：使用同一个视图函数来显示不同用户的订单信息。
 
 路由传递的参数默认当作string处理
-```
+```Python
 @app.route('/orders/<order_id>')
 def hello_itheima(order_id):
     # 此处的逻辑：去查询数据库改用户的订单信息，并返回
@@ -35,9 +35,9 @@ def hello_itheima(order_id):
 - 如果参数无法转换成功，就无法匹配该路由
 
 
-**代码如下：**
+**Flask_Demo.py文件代码如下：**
 
-```
+```Python
 # -*- coding:utf-8 -*-
 
 # 1.导入Flask扩展

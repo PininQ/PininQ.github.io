@@ -288,7 +288,7 @@ if __name__ == '__main__':
 
 **`books.html`文件**
 
-```HTML
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>

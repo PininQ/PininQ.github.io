@@ -7,8 +7,6 @@ keywords: Python, Flask, SQLAlchemy
 ---
 
 
-# 数据库基本操作
-
 ## 一. 增删改操作
 
 ### 1. 基本概念
@@ -31,7 +29,7 @@ db.session.delete(user)    # 删除数据库（需要跟上commit）
 
 #### 2.1 在视图函数中定义模型类
 
-- **Flask_SQLAlchemy_demo.py如下：**
+**Flask_SQLAlchemy_demo.py如下：**
 
 ```Python
 # -*- coding:utf-8 -*-
@@ -102,7 +100,7 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 ```
--  **在终端进行增删改操作：**
+#### 2.2在终端进行增删改操作：**
 
 ```
 >>> from Flask_SQLAlchemy_demo import *
@@ -150,10 +148,8 @@ class User(db.Model):
 - 其中relationship描述了Role和User的关系。在此文中，第一个参数为对应参照的类"User"
 - 第二个参数backref为类User申明新属性的方法
 
+1. 添加一个角色和两个用户
 ```python
-
-1.添加一个角色和两个用户
-
 In [1]: from Flask_SQLAlchemy_demo import *
 
 In [2]: role = Role(name='admin')
@@ -169,9 +165,10 @@ In [6]: user2 = User(name='ls', role_id=role.id)
 In [7]: db.session.add_all([user1, user2])
 
 In [8]: db.session.commit()
+```
 
-2.实现关系引用查询
-
+2. 实现关系引用查询
+```Python
 In [9]: role.users
 Out[9]: [<User: zs 1 None None>, <User: ls 2 None None>]
 
@@ -189,7 +186,7 @@ Out[12]: u'admin'
 
 ### 1. 基本概念
 
-#### 1.1常用的SQLAlchemy查询过滤器
+#### 1.1 常用的SQLAlchemy查询过滤器
 
 过滤器 | 说明
 ---|---
@@ -249,19 +246,16 @@ db.session.commit()
 
 #### 2.3 查询练习如下
 
-```
+```Python
 1. 查询所有用户数据
 # all()返回查询到的所有对象
 User.query.all()
 
-
 2. 查询有多少个用户
 User.query.count()
 
-
 3.查询第一个用户
 User.query.first()
-
 
 4.查询id为4的用户【3种方式】
 # filter_by直接用属性名，比较用=，filter用类名.属性名，比较用==
@@ -272,7 +266,6 @@ User.query.filter_by(id=4).first()  # 属性 =
 User.query.filter(User.id==4).first()    # 对象名.属性 ==
 ```
 
----
 
 **代码如下：**
 ```Python
@@ -371,7 +364,7 @@ if __name__ == '__main__':
 
 **操作过程如下：**
 
-```python
+```Python
 In [1]: from Flask_SQLAlchemy_demo import *
 
 In [2]: User.query.all()
@@ -404,14 +397,13 @@ Out[6]: <User: su 4 su@163.com 434323>
 In [7]: User.query.filter(User.id==4).first()
 Out[7]: <User: su 4 su@163.com 434323>
 
-
-filter_by: 属性=
-filter: 对象.属性==
-filter功能更强大，可以实现更多的一些查询，支持比较运算符
+# filter_by: 属性=
+# filter: 对象.属性==
+# filter功能更强大，可以实现更多的一些查询，支持比较运算符
 ```
 
 **flask_sql_demo数据库中的数据**
-```
+```SQL
 mysql> select * from roles;
 +----+-------+
 | id | name  |

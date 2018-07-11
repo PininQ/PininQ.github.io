@@ -33,15 +33,15 @@ pip install flask-mysqldb
 
 ### 使用Flask-SQLAlchemy管理数据库
 
-在Flask-SQLAlchemy中，数据库使用URL指定，而程序使用的数据库必须保存到Flask配置对象SQLALCHEMY_DATABASE_URI键中。
+在Flask-SQLAlchemy中，数据库使用URL指定，而程序使用的数据库必须保存到Flask配置对象`SQLALCHEMY_DATABASE_URI`键中。
 
-#### Flask的数据库设置
+**Flask的数据库设置**
 
 ```python
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:password@127.0.0.1:3306/test'
 ```
 
-其他设置：
+**其他设置**
 ```python
 # 动态追踪修改设置，如未设置只会提示警告，不建议开启
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -49,46 +49,20 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
 ```
 
-<table>
-  <tr>
-    <th>名字</th>
-    <th>备注</th>
-  </tr>
-  <tr>
-    <td> SQLALCHEMY_DATABASE_URI </td>
-    <td> 用于连接的数据库URI。例如：sqlite:////tmp/test.dbmysql://username:password@server/db</td>
 
-  </tr>
-  <tr>
-    <td>SQLALCHEMY_BINDS </td>
-    <td> 一个映射binds到链接URI的字典。更多binds的信息见用Binds操作多个数据库 </td>
+名字 | 备注
+---|---
+SQLALCHEMY_DATABASE_URI | 用于连接的数据库URI。例如：sqlite:////tmp/test.dbmysql://username:password@server/db
+ SQLALCHEMY_BINDS    |一个映射binds到链接URI的字典。更多binds的信息见用Binds操作多个数据库
+  SQLALCHEMY_ECHO  |如果设置为True，SQLAlchemy会记录所有发给stderr的语句，这对调试有用。（打印sql语句）
+  SQLALCHEMY_RECORD_QUERIES  |可以用于显示地禁用或启用查询记录。查询记录在调试或测试模式自动启用。更多信息见get_debug_queries()。
+  SQLALCHEMY_NATIVE_UNICODE  |可以用于显示禁用原生Unicode支持。当使用不合适的指定无编码的数据库默认值时，这对于一些数据库适配器时必须的（比如Ubuntu上某些 版本的PostgreSQL）。
+   SQLALCHEMY_POOL_SIZE |数据库连接池大小。默认时引擎默认值（通常是5）
+ SQLALCHEMY_POOL_TIMEOUT   |设定连接池的连接超时时间。默认是10。
+   SQLALCHEMY_POOL_RECYCLE |多少秒后自动回收连接。这对MySQL是必要的，它默认移除闲置多于8小时的连接。注意如果使用了MySQL，Flask-SQLAlchemy自动设定这个值为2小时。
 
-  <tr>
-    <td>SQLALCHEMY_ECHO </td>
-    <td> 如果设置为True，SQLAlchemy会记录所有发给stderr的语句，这对调试有用。（打印sql语句）</td>
 
-  </tr>
-    <tr>
-        <td>SQLALCHEMY_RECORD_QUERIES</td>
-        <td>可以用于显示地禁用或启用查询记录。查询记录在调试或测试模式自动启用。更多信息见get_debug_queries()。</td>
-    </tr>
-    <tr>
-        <td>SQLALCHEMY_NATIVE_UNICODE</td>
-        <td>可以用于显示禁用原生Unicode支持。当使用不合适的指定无编码的数据库默认值时，这对于一些数据库适配器时必须的（比如Ubuntu上某些 版本的PostgreSQL）。</td>
-    </tr>
-    <tr>
-        <td>SQLALCHEMY_POOL_SIZE</td>
-        <td>数据库连接池大小。默认时引擎默认值（通常是5）</td>
-    </tr>
-    <tr>
-        <td>SQLALCHEMY_POOL_TIMEOUT</td>
-        <td>设定连接池的连接超时时间。默认是10.</td>
-    </tr>
-    <tr>
-        <td>SQLALCHEMY_POOL_RECYCLE</td>
-        <td>多少秒后自动回收连接。这对MySQL是必要的，它默认移除闲置多于8小时的连接。注意如果使用了MySQL，Flask-SQLAlchemy自动设定这个值为2小时。</td>
-    </tr>
-</table>
+
 
 ### 常见的SQLAlchemy字段类型
 
