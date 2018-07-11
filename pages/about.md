@@ -32,7 +32,7 @@ permalink: /about/
 {% endfor %}
 
 --- 
-# 求职简历
+# 个人简历
 
 - 手机：18878475439
 - Email：2538323140@qq.com
