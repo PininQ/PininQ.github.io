@@ -68,7 +68,7 @@ CSRF_ENABLED 是为了 CSRF（跨站请求伪造）保护。SECRET_KEY 用来生
     <label > 确认密码:</label><input type="password" name="password2"> <br>
     <input type="submit" value="提交"> <br>
     { % for message in get_flashed_messages() % }
-        {{ message }}
+        { { message } }
     { % endfor % }
 </form>
 ```
@@ -127,10 +127,10 @@ if __name__ == '__main__':
 ```html
 <form method="post">
     {# 设置 csrf_token#}
-    {{ form.csrf_token() }}
-    {{ form.username.label }}{{ form.username }}<br>
-    {{ form.password.label }}{{ form.password }}<br>
-    {{ form.password2.label }}{{ form.password2 }}<br>
+    { { form.csrf_token() } }
+    { { form.username.label } }{ { form.username } }<br>
+    { { form.password.label } }{ { form.password } }<br>
+    { { form.password2.label } }{ { form.password2 } }<br>
 </form>
 ```
 **视图函数**

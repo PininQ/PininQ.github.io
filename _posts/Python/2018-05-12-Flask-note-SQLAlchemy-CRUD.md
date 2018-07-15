@@ -106,12 +106,12 @@ if __name__ == '__main__':
 ```python
 >>> from Flask_SQLAlchemy_demo import *
 
-添加一条 Role 数据
+# 添加一条 Role 数据
 >>> role = Role(name='admin')
 >>> db.session.add(role)
 >>> db.session.commit()
 
-添加一条 User 数据，数据有误可以使用回滚，将 add 的对象从 session 移除
+# 添加一条 User 数据，数据有误可以使用回滚，将 add 的对象从 session 移除
 >>> user = User(name='qinbin')
 >>> db.session.add(user)
 >>> db.sessioon.rollback()
@@ -119,11 +119,11 @@ if __name__ == '__main__':
 >>> db.session.add(user)
 >>> db.session.commit()
 
-修改数据
+# 修改数据
 >>> user.name = 'qiuling'
 >>> db.session.commit()
 
-删除数据
+# 删除数据
 >>> db.session.delete(user)
 >>> db.session.commit()
 ```
@@ -149,8 +149,10 @@ class User(db.Model):
 - 其中 relationship 描述了 Role 和 User 的关系。在此文中，第一个参数为对应参照的类 "User"
 - 第二个参数 backref 为类 User 申明新属性的方法
 
-1. 添加一个角色和两个用户
+
 ```python
+# 1. 添加一个角色和两个用户
+
 In [1]: from Flask_SQLAlchemy_demo import *
 
 In [2]: role = Role(name='admin')
@@ -166,10 +168,9 @@ In [6]: user2 = User(name='ls', role_id=role.id)
 In [7]: db.session.add_all([user1, user2])
 
 In [8]: db.session.commit()
-```
 
-2. 实现关系引用查询
-```python
+# 2. 实现关系引用查询
+
 In [9]: role.users
 Out[9]: [<User: zs 1 None None>, <User: ls 2 None None>]
 
@@ -248,17 +249,17 @@ db.session.commit()
 #### 2.3 查询练习如下
 
 ```python
-1. 查询所有用户数据
+# 1. 查询所有用户数据
 # all() 返回查询到的所有对象
 User.query.all()
 
-2. 查询有多少个用户
+# 2. 查询有多少个用户
 User.query.count()
 
-3. 查询第一个用户
+# 3. 查询第一个用户
 User.query.first()
 
-4. 查询 id 为 4 的用户【3 种方式】
+# 4. 查询 id 为 4 的用户【3 种方式】
 # filter_by 直接用属性名，比较用 =，filter 用类名. 属性名，比较用 ==
 # filter_by 用于查询简单的列名，不支持比较运算符
 # filter 比 filter_by 的功能更加强大，支持比较运算符，支持 or_、in_等语法
@@ -268,7 +269,7 @@ User.query.filter(User.id==4).first()    # 对象名. 属性 ==
 ```
 
 
-** 代码如下：**
+**代码如下：**
 ```python
 # -*- coding:utf-8 -*-
 from flask import Flask

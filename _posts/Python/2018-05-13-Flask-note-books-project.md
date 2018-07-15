@@ -297,13 +297,13 @@ if __name__ == '__main__':
 </head>
 <body>
 <form method="post">
-    {{ form.csrf_token() }}
-    {{ form.author.label }}{{ form.author }} <br>
-    {{ form.book.label }}{{ form.book }} <br>
-    {{ form.submit }} <br>
+    { { form.csrf_token() } }
+    { { form.author.label } }{ { form.author } } <br>
+    { { form.book.label } }{ { form.book } } <br>
+    { { form.submit } } <br>
     {#  显示消息闪现的内容  #}
     { % for message in get_flashed_messages() % }
-        {{ message }}
+        { { message } }
     { % endfor % }
 
 </form>
@@ -313,10 +313,10 @@ if __name__ == '__main__':
 {# 先遍历作者，然后在作者里面遍历书籍 #}
 <ul>
     { % for author in authors % }
-        <li>{{ author.name }}/<a href="{{ url_for('delete_author', author_id=author.id) }}">删除</a></li>
+        <li>{ { author.name } }/<a href="{ { url_for('delete_author', author_id=author.id) } }">删除</a></li>
         <ul>
             { % for book in author.books % }
-                <li>《{{ book.name }}》/<a href="{{ url_for('delete_book', book_id=book.id) }}">删除</a></li>
+                <li>《{ { book.name } }》/<a href="{ { url_for('delete_book', book_id=book.id) } }">删除</a></li>
             { % else % }
                 <li > 无</li>
             { % endfor % }
