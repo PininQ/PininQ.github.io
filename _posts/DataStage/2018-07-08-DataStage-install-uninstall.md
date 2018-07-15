@@ -6,7 +6,7 @@ description: DataStage9.1的安装与卸载
 keywords: DataStage
 ---
 
-**一、强制安装DataStage9.1**
+### 一、强制安装DataStage9.1
 
 win10安装DataStage9.1时出现系统环境检测失败
 
@@ -21,7 +21,7 @@ win10安装DataStage9.1时出现系统环境检测失败
 
 参考博客链接：[win10安装datastage出现系统检测需求失败解决方法](https://blog.csdn.net/weixin_41287692/article/details/79348536)
 
-**二、强制卸载DataStage9.1**
+### 二、强制卸载DataStage9.1
 
 win10卸载DataStage9.1时出现系统环境检测失败
 
@@ -39,4 +39,4 @@ win10卸载DataStage9.1时出现系统环境检测失败
 
 ![卸载完成](/images/posts/datastage/uninstall-successfully.png)
 
-总结：win10强制安装和强制卸载需要进入cmd，在`setup.exe`和`uninstall.exe`后面添加` -force`忽略**系统环境检测失败**而无法安装DataStage的问题。
+**总结**：win10强制安装和强制卸载需要进入cmd，在`setup.exe`和`uninstall.exe`后面添加` -force`忽略**系统环境检测失败**而无法安装DataStage的问题。
