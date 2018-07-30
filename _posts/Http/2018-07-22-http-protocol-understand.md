@@ -44,7 +44,7 @@ Host: www.xhuajiao.top
 ##  HTTP 协议内容
 
 请求「浏览器 -> 服务器」
-```json
+```
 GET /video/21/1/ HTTP/1.1
 Host: www.xhuajiao.top
 Connection: keep-alive
@@ -60,7 +60,7 @@ Cookie: session=eyJjc3JmX3Rva2VuIjoiMjgxNDE2Y2Q0YThhYzhkNzUxMzIxMWRiNzgzNGM1NDYw
 
 
 响应「服务器 -> 浏览器」
-```json
+```
 HTTP/1.1 200 OK
 Server: nginx/1.12.0
 Date: Mon, 30 Jul 2018 09:01:40 GMT
@@ -123,7 +123,7 @@ PS：所以，在网站中没有用到的资源引用最好是删除，以减少
 GET 和 POST 区别
 
 1）GET 方式提交
-```json
+```
 GET /login/?name=qinbin&password=123456 HTTP/1.1
 Host: www.xhuajiao.top
 Connection: keep-alive
@@ -141,7 +141,7 @@ Accept-Language: zh-CN,zh;q=0.9
 
 2）POST 方式提交
 
-```json
+```
 POST /login/ HTTP/1.1
 Host: www.xhuajiao.top
 Connection: keep-alive
@@ -159,8 +159,7 @@ name=qinbin&pwd=123456
 - POST 方式提交敏感数据
 
 ### 2. 请求头
-```json
-
+```
 Host: www.xhuajiao.top --- 当前请求访问的目标地址「主机:端口」
 Connection: keep-alive --- 浏览器跟服务器连接状态。close：连接关闭，keep-alive：保持连接
 Cache-Control: max-age=0 --- 强制每次请求直接发送给源服务器，而不经过本地缓存版本的校验
