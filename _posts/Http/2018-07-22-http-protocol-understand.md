@@ -6,9 +6,9 @@ description: 记录刚进入贺院的事情，以及后来的事情
 keywords: HTTP, Web, request， response
 ---
 
-HTTP是hypertext transfer protocol（超文本传输协议）的简写，它是TCP/IP协议的一个应用层协议，用于定义 Web 浏览器与 Web 服务器之间交换数据的过程。 
+HTTP 是 hypertext transfer protocol（超文本传输协议）的简写，它是 TCP/IP 协议的一个应用层协议，用于定义 Web 浏览器与 Web 服务器之间交换数据的过程。
 
-HTTP 协议是学习 Web 开发的基石，不深入了解 HTTP 协议，就不能说掌握了WEB开发，更无法管理和维护一些复杂的 Web 站点。
+HTTP 协议是学习 Web 开发的基石，不深入了解 HTTP 协议，就不能说掌握了 WEB 开发，更无法管理和维护一些复杂的 Web 站点。
 
 HTTP 协议的版本：HTTP/1.0、HTTP/1.1
 
@@ -17,7 +17,7 @@ HTTP 协议的版本：HTTP/1.0、HTTP/1.1
 
 超文本传输协议（HTTP）的设计目的是保证客户机与服务器之间的通信。
 
-HTTP 的工作方式是客户机与服务器之间的请求-应答协议。
+HTTP 的工作方式是客户机与服务器之间的请求 - 应答协议。
 
 Web 浏览器可能是客户端，而计算机上的网络应用程序也可能作为服务器端。
 
@@ -25,11 +25,11 @@ Web 浏览器可能是客户端，而计算机上的网络应用程序也可能�
 
 客户端连上 Web 服务器之后，若想获得 Web 服务器中的某个 Web 资源，需遵守一定的通讯格式，HTTP 协议用于定义客户端与 Web 服务器通讯的格式。简单来讲，HTTP 协议是对浏览器客户端和服务器端之间数据传输的格式规范。
 
-## 查看 http 协议的工具
+## 查看 HTTP 协议的工具
 
 1. 使用火狐的 firebug 插件「右键 → firebug → 网络」
 1. 使用谷歌的「审查元素」
-1. 使用系统自带的telnet工具「远程访问工具」
+1. 使用系统自带的 telnet 工具「远程访问工具」
     - telnet localhost 8000 → 访问 Nginx 服务器
     - ctrl+] → 回车 → 可以看到回显
     - 输入请求内容
@@ -86,7 +86,7 @@ GET /video/21/1/ HTTP/1.1
 - HTTP1.0：当前浏览器客户端与服务器端建立连接之后，只能发送一次请求，一次请求之后连接关闭。
 - HTTP1.1：当前浏览器客户端与服务器端建立连接之后，可以在一次连接中发送多次请求。（基本都使用 1.1）
 
-注：通俗来讲，区别只有一个：当客户端与web服务器建立连接后（底层是流的操作），如果采用HTTP1.0协议，流会立即断开；HTTP1.1协议，流会保存一段时间，下次重新连接时，还继续使用这个流。
+注：通俗来讲，区别只有一个：当客户端与 Web 服务器建立连接后（底层是流的操作），如果采用 HTTP1.0 协议，流会立即断开；HTTP1.1 协议，流会保存一段时间，下次重新连接时，还继续使用这个流。
 
 问题：一个 Web 页面中，使用 img 标签引用了三幅图片，当客户端访问服务器中的这个 Web 页面时，客户端总共会访问几次服务器，即向服务器发送了几次 HTTP 请求。
 
@@ -115,7 +115,7 @@ PS：所以，在网站中没有用到的资源引用最好是删除，以减少
 表单提交：
 
 ```html
-<form action="提交地址" method="GET/POST">	
+<form action="提交地址" method="GET/POST">
 
 <form>
 ```
@@ -160,7 +160,7 @@ name=qinbin&pwd=123456
 
 ### 2. 请求头
 ```
-Host: www.xhuajiao.top --- 当前请求访问的目标地址「主机:端口」
+Host: www.xhuajiao.top --- 当前请求访问的目标地址「主机: 端口」
 Connection: keep-alive --- 浏览器跟服务器连接状态。close：连接关闭，keep-alive：保持连接
 Cache-Control: max-age=0 --- 强制每次请求直接发送给源服务器，而不经过本地缓存版本的校验
 Upgrade-Insecure-Requests: 1 --- 将所有连接强制以 https 或 wss 等 SSL 加密形式发送请求
@@ -173,12 +173,12 @@ Cookie: session=eyJjc3JmX3Rva2VuIjoiMjgxNDE2Y2Q0YThhYzhkNzUxMzIxMWRiNzgzNGM1NDYw
 ```
 ### 3. 实体内容
 
-只有POST提交的参数会放到实体内容中
+只有 POST 提交的参数会放到实体内容中
 
-### 4. request常见应用
+### 4. request 常见应用
 
 - 获取浏览器类型
-- 请求参数的中文乱码问题 
+- 请求参数的中文乱码问题
 - 各种表单输入项数据的获取
 
 
@@ -189,7 +189,7 @@ Cookie: session=eyJjc3JmX3Rva2VuIjoiMjgxNDE2Y2Q0YThhYzhkNzUxMzIxMWRiNzgzNGM1NDYw
 ### 1. 响应行
 
 #### HTTP 协议版本
-    
+
 #### 状态码: 服务器处理请求的结果（状态）
 
 常见的状态：
@@ -207,11 +207,11 @@ Server: nginx/1.12.0 --- 表示服务器的类型
 Date: Mon, 30 Jul 2018 09:36:16 GMT --- 响应发出的时间
 Content-Type: text/html; charset=utf-8 --- 表示服务器发送给浏览器的数据类型及内容编码
 Content-Length: 219 --- 表示服务器发送给浏览器的数据长度
-Connection: keep-alive --- 表示服务器和浏览器的连接状态。close：关闭连接 keep-alive:保存连接
-Location: https://www.xhuajiao.top/user/ --- 表示重定向的地址，该头和302的状态码一起使用。
-Set-Cookie: session=.eJwtyzEOgCAMQNG7dHagUgo6OnsEEoMFEmOiCchkvLsObn94_wapJS_XuacDRugdErJECi6Ii9ag7hHjap0mMcQqZA6WGTpoNZXv8M2SYt9YZe0bJTV8bZJM82-WLcKI-nkBchAeww.DkBtkA.Ji-8izBd95tfTHVEFiJhVKCDh-4; HttpOnly; Path=/ --- 表示服务器发送给浏览器的cookie信息（会话管理用到）
+Connection: keep-alive --- 表示服务器和浏览器的连接状态。close：关闭连接 keep-alive: 保存连接
+Location: https://www.xhuajiao.top/user/ --- 表示重定向的地址，该头和 302 的状态码一起使用。
+Set-Cookie: session=.eJwtyzEOgCAMQNG7dHagUgo6OnsEEoMFEmOiCchkvLsObn94_wapJS_XuacDRugdErJECi6Ii9ag7hHjap0mMcQqZA6WGTpoNZXv8M2SYt9YZe0bJTV8bZJM82-WLcKI-nkBchAeww.DkBtkA.Ji-8izBd95tfTHVEFiJhVKCDh-4; HttpOnly; Path=/ --- 表示服务器发送给浏览器的 cookie 信息（会话管理用到）
 ```
-### 3. response常见应用
+### 3. response 常见应用
 
 - 文件下载功能
 - 302+location 实现重定向
@@ -219,7 +219,7 @@ Set-Cookie: session=.eJwtyzEOgCAMQNG7dHagUgo6OnsEEoMFEmOiCchkvLsObn94_wapJS_Xuac
     - 请求重定向指：一个 Web 资源收到客户端请求后，通知客户端去访问另外一个 Web 资源，这称之为请求重定向。
     - 应用场景：用户注册。
     - Flask 中实现方式
-        - redirect(url_for("login"))，url_for() 用来拼接 URL 
+        - redirect(url_for("login"))，url_for() 用来拼接 URL
         - 实现原理：302 状态码和 location 头即可实现重定向
 
 
@@ -250,4 +250,4 @@ HTTP 协议：浏览器和服务器之间数据传输的格式规范
 
 [HTTP 方法：GET 对比 POST](http://www.w3school.com.cn/tags/html_ref_httpmethods.asp)
 
-[JavaWeb学习----http协议](https://www.cnblogs.com/smyhvae/p/4126689.html)
+[JavaWeb 学习 ----http 协议](https://www.cnblogs.com/smyhvae/p/4126689.html)
