@@ -2,7 +2,7 @@
 layout: post
 title: HTTP 协议理解
 categories: HTTP
-description: 记录刚进入贺院的事情，以及后来的事情
+description: HTTP 协议的一些理解
 keywords: HTTP, Web, request， response
 ---
 
