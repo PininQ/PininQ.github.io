@@ -23,7 +23,7 @@ ASIIC 码的扩展，Unicode 把所有语言都统一到一套编码里，称为
 
 #### ASCII、Unicode 和 UTF-8 的关系
 字符 | ASCII|Unicode|UTF-8
-:---:|:---:|:---:| :---:
+---|---|---|---
 A|	01000001|	00000000 01000001|	01000001
 中	|x|	01001110 00101101|	11100100 10111000 10101101
 
@@ -96,9 +96,9 @@ Python2 和 Python3 字符串类型对应关系如下：
 
 1. 默认编码格式改为 Unicode
 
-1. 所有的 Python 内置模块都支持 Unicode
+2. 所有的 Python 内置模块都支持 Unicode
 
-1. 不再支持 u'中文'的语法格式
+3. 不再支持 u'中文'的语法格式
 
 ### Python 中编码错误汇总
 
@@ -148,11 +148,11 @@ Python3 urllib.request.urlopen(url) 中，url 地址中不能出现中文，而�
 
 1. 导入 quote 方法 `from urllib.parse import quote`
 
-1. 导入 string 模块 `import string`
+2. 导入 string 模块 `import string`
 
-2. 在进行 urlopen(url) 前，先对 url = quote(url, safe=string.printable)
+3. 在进行 urlopen(url) 前，先对 url = quote(url, safe=string.printable)
 
-1. 方法 quote 的参数 safe 表示可以忽略的字符。
+4. 方法 quote 的参数 safe 表示可以忽略的字符。
 
 string.printable 表示 ASCII 码第 33～126 号可打印字符，其中第 48～57 号为 0～9 十个阿拉伯数字；65～90 号为 26 个大写英文字母，97～122 号为 26 个小写英文字母，其余的是一些标点符号、运算符号等。
 
