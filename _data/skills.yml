@@ -1,6 +1,9 @@
-- name: Software Engineer Keywords
+- name: 软件工程
   keywords:
-      - Java
-      - C++
       - Python
+      - Design Patterns
 
+- name: 其他
+  keywords:
+      - PS
+      - ...
