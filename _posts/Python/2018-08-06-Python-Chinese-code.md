@@ -22,10 +22,7 @@ ASIIC 码的扩展，Unicode 把所有语言都统一到一套编码里，称为
 将 Unicode 编码转化为 “可变长编码” 的 UTF-8 编码。UTF-8 编码把一个 Unicode 字符根据不同的数字大小编码成 1-6 个字节，常用的英文字母被编码成 1 个字节，汉字通常是 3 个字节，只有很生僻的字符会被编码成 4-6 个字节。
 
 #### ASCII、Unicode 和 UTF-8 的关系
-字符 | ASCII|Unicode|UTF-8
----|---|---|---
-A|	01000001|	00000000 01000001|	01000001
-中	|x|	01001110 00101101|	11100100 10111000 10101101
+![ascii-unicode-utf-8.png](/images/posts/python/ascii-unicode-utf-8.png)
 
 从上面的表格还可以发现，是 ASCII 编码实际上可以被看成是 UTF-8 编码的一部分。所以，大量只支持 ASCII 编码的历史遗留软件可以在 UTF-8 编码下继续工作。
 
@@ -102,7 +99,7 @@ Python2 和 Python3 字符串类型对应关系如下：
 
 ### Python 中编码错误汇总
 
-1. SyntaxError: (Unicode error) ‘utf-8’ codec can’t decode byte 0xc4 in position 0:
+1、 SyntaxError: (Unicode error) ‘utf-8’ codec can’t decode byte 0xc4 in position 0:
 invalid continuation byte
 
 > Python3.X 源码文件默认使用 utf-8 编码，所以可以正常解析中文，无需指定 UTF-8 编码。
@@ -116,7 +113,7 @@ Pycharm 设置步骤：
 
 ![pycharm-utf8](/images/posts/python/pycharm-utf8.png)
 
-2. SyntaxError: Non-ASCII character '\xe4' in file test.py on line 2, but no encoding declared;
+2、 SyntaxError: Non-ASCII character '\xe4' in file test.py on line 2, but no encoding declared;
 
 Python2.x 中默认的编码格式是 ASCII 格式，在没修改编码格式时无法正确打印汉字，所以在读取中文时会报错。
 
@@ -125,7 +122,7 @@ Python2.x 中默认的编码格式是 ASCII 格式，在没修改编码格式时
 > 注意：#coding=utf-8 的 = 号两边不要空格。
 
 
-3. UnicodeEncodeError: 'ASCII' codec can't encode characters in position 0-1: ordinal not in range(128)
+3、 UnicodeEncodeError: 'ASCII' codec can't encode characters in position 0-1: ordinal not in range(128)
 
 URL 中的中文编码问题
 
@@ -168,7 +165,7 @@ urlobject = urllib.request.urlopen(url)
 ```
 > Python2.x 中的用法：urllib.quote(text)
 
-4. UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 3: invalid start byte
+4、 UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 3: invalid start byte
 
 ```python
 >>> s = u"中文"
