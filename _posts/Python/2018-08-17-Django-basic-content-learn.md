@@ -64,6 +64,8 @@ keywords: Python, Django
 
 - Django 帮助文档：python manage.py -h
 
+- Django 站点超级用户创建：python manage.py createsuperuser
+
 - Django 命令格式：python manage.py <command> [options]
 
 
