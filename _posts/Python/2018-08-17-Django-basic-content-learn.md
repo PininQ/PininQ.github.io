@@ -9,11 +9,11 @@ keywords: Python, Django
 
 ## Django 项目主要文件
 
-- `manage.py` 是一个命令行工具，可以是我们使用多种方式对Django项目进行交互
-- `__init__.py` 一个空文件，他告诉python这个目录应该被看作一个python目录
+- `manage.py` 是一个命令行工具，可以是我们使用多种方式对 Django 项目进行交互
+- `__init__.py` 一个空文件，他告诉 python 这个目录应该被看作一个 python 目录
 - `setting.py` 项目的配置文件
-- `urls.py` 项目的url声明
-- `wsgi.py` 项目于WSGI兼容的web服务器入口
+- `urls.py` 项目的 url 声明
+- `wsgi.py` 项目于 WSGI 兼容的 web 服务器入口
 
 ## Django 开发流程梳理
 
@@ -52,7 +52,7 @@ keywords: Python, Django
 
 - 创建 Django 项目：django-admin startproject project
 
-- 创建APP：python manage.py startapp myApp
+- 创建 APP：python manage.py startapp myApp
 
 - 生成迁移文件：python manage.py makemigrations
 
@@ -86,7 +86,7 @@ keywords: Python, Django
 
 8. 浏览器测试
 
-> PS：如果有一个现成的 Django 项目，需要添加表，可以先在 `model.py` 中添加对应的类，然后再生成迁移文件，再然后执行迁移，`migrations` 目录下就会多出一个 `0002_类名.py` 的文件，相应的，数据库中也会新增加的一张新表。如果数据库需要修改字段或者字段设计不合理或者重新创建数据库等等，需要把迁移文件全部删除，数据库也删除，再重新生成迁移文件---然后执行迁移，对应的数据库表就会自动生成了。当然，如果数据库数据较多，比较重要，也可以对 model.py 和数据库中的表字段一起修改，不需要删除数据库。
+> PS：如果有一个现成的 Django 项目，需要添加表，可以先在 `model.py` 中添加对应的类，然后再生成迁移文件，再然后执行迁移，`migrations` 目录下就会多出一个 `0002_类名.py` 的文件，相应的，数据库中也会新增加的一张新表。如果数据库需要修改字段或者字段设计不合理或者重新创建数据库等等，需要把迁移文件全部删除，数据库也删除，再重新生成迁移文件 --- 然后执行迁移，对应的数据库表就会自动生成了。当然，如果数据库数据较多，比较重要，也可以对 model.py 和数据库中的表字段一起修改，不需要删除数据库。
 
 
 
