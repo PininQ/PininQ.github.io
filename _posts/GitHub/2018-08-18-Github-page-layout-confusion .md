@@ -26,17 +26,17 @@ http://tool.chinaz.com/dns
 http://ipaddress.com/
 ```
 
-（1）ping 加速设置的对应域名，查看网络延迟，如：`ping -t assets-cdn.github.com`。
+（2）ping 加速设置的对应域名，查看网络延迟，如：`ping -t assets-cdn.github.com`。
 
-（2）清除浏览记录，浏览器本地缓存。
+（3）清除浏览记录，浏览器本地缓存。
 
-（3）修改 hosts 文件（只保留下面这行）：
+（4）修改 hosts 文件（只保留下面这行）：
 
 ```
 192.30.253.112 github.com
 ```
 
-（4）刷新 DNS 缓存：进入 CMD，执行 `ipconfig/flushdns`，如下：
+（5）刷新 DNS 缓存：进入 CMD，执行 `ipconfig/flushdns`，如下：
 ```
 C:\Users\BL>ipconfig/flushdns
 
