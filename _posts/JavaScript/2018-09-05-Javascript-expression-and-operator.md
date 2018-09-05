@@ -10,13 +10,13 @@ keywords: JavaScript, Expression, Operator
 
 表达式是一组代码的集合，它返回一个值。——[《JavaScript 权威指南》](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#%E8%A1%A8%E8%BE%BE%E5%BC%8F)
 
-JavaScript 有以下表达式类型，摘自 [《JavaScript 权威指南》](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#%E8%A1%A8%E8%BE%BE%E5%BC%8F)：
+JavaScript 有以下表达式类型（摘自 [《JavaScript 权威指南》](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#%E8%A1%A8%E8%BE%BE%E5%BC%8F)）：
 
-算数: 得出一个数字, 例如 3.14159. (通常使用 `arithmetic operators`.)
-字符串: 得出一个字符串, 例如, "Fred" 或 "234". (通常使用 `string operators`.)
-逻辑值: 得出 true 或者 false. (经常涉及到 `logical operators`.)
-基本表达式: javascript 中基本的关键字和一般表达式。
-左值表达式: 分配给左值。
+- 算数: 得出一个数字, 例如 3.14159. (通常使用 `arithmetic operators`.)
+- 字符串: 得出一个字符串, 例如, "Fred" 或 "234". (通常使用 `string operators`.)
+- 逻辑值: 得出 true 或者 false. (经常涉及到 `logical operators`.)
+- 基本表达式: javascript 中基本的关键字和一般表达式。
+- 左值表达式: 分配给左值。
 
 
 ### 原始表达式
@@ -55,7 +55,7 @@ var k = {x : 1, y : 2}  等价于 var o = new Object(); o.x = 1; o.y = 2;
 
 ### 函数表达式
 
-函数表达式非常类似于 ` 函数声明 `，并且两者拥有几乎相同的语法。函数表达式与函数声明的最主要区别是 ` 函数名称 `，在函数表达式中可省略它，从而创建匿名函数。一个函数表达式可以被用作一个 `IIFE`（Immediately Invoked Function Expression，即时调用的函数表达式），它一旦定义就运行。
+函数表达式非常类似于 `函数声明`，并且两者拥有几乎相同的语法。函数表达式与函数声明的最主要区别是 `函数名称`，在函数表达式中可省略它，从而创建匿名函数。一个函数表达式可以被用作一个 `IIFE`（Immediately Invoked Function Expression，即时调用的函数表达式），它一旦定义就运行。
 
 **示例**
 
@@ -187,5 +187,5 @@ void(0) // undefined
 
 ## 运算优先级
 
-[JavaScript 所有运算符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+[JavaScript 所有运算符的优先级](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
 

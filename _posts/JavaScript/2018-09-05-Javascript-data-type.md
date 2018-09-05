@@ -106,7 +106,7 @@ new Object() == new Object()  //  false，JS 对象比较是比较引用，而�
 
 适合基本类型及 function 检测，遇到 null 失效。
 
-** 实例：**
+**实例：**
 ```javascript
 typeof 100   // number
 typeof true   // boolean
@@ -121,7 +121,7 @@ typeof(null)   // object，
 
 通过 `{}.toString` 拿到，适合内置对象和基元类型，遇到 `null` 和 `undefined` 失效 (IE678 等返回 [object Object])。
 
-** 实例：**
+**实例：**
 
 ![Javascript-Data-Type-02](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-Data-Type-02.png)
 
@@ -129,7 +129,7 @@ typeof(null)   // object，
 
 适合自定义对象，也可以用来检测原生对象，在不同 iframe 和 window 间检测时失效。
 
-** 实例：**
+**实例：**
 ```javascript
 Object.prototype.toString.apply([]); === "[object Array]"
 Object.prototype.toString.apply(function(){}); === "[object Function]"
