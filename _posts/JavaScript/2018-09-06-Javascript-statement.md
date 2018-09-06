@@ -6,13 +6,13 @@ description: JavaScript 语句
 keywords: JavaScript, Statement
 ---
 
-JavaScript程序由语句组成，语句遵守特定的语法规则。
+JavaScript 程序由语句组成，语句遵守特定的语法规则。
 
-例如：if语句, while语句, with语句等等。
+例如：if 语句, while 语句, with 语句等等。
 
 ## JavaScript 常见语句
 
-语句 |语句|语句
+语句 | 语句 | 语句
 ---|---|---
 try catch		|switch			|debugger
 break       |	if...else|label
@@ -23,17 +23,17 @@ var|for...in	|
 
 ### 块 block
 
-块语句常用于组合0 ~ 多个语句。块语句用一对花括号定义。
+块语句常用于组合 0 ~ 多个语句。块语句用一对花括号定义。
 
 #### 语法
 
 ```javascript
 // 块声明
 {
-    语句1;
-    语句2;
+    语句 1;
+    语句 2;
     ...
-    语句n;
+    语句 n;
 }
 ```
 #### 示例
@@ -69,20 +69,20 @@ JavaScript 中没有块级作用域。在块里定义变量跟在块外面定义
     var x = 1;
     // .....
 }
-// -----------------分割线-------------------
+// ----------------- 分割线 -------------------
 var x = 1;
 {
     // .....
 }
 ```
-以下两种方式是等价的，在for循环结束后，在for循环外面依然可以拿到i的值
+以下两种方式是等价的，在 for 循环结束后，在 for 循环外面依然可以拿到 i 的值
 ```javascript
 // 方式一
 for (var i = 0; i < 10; i++) {
     var str = "hi";
     console.log(str);
 }
-// -----------------分割线-------------------
+// ----------------- 分割线 -------------------
 // 方式二
 var i = 0
 for (; i < 10; i++) {
@@ -115,11 +115,11 @@ var varname1 [= value1 [, varname2 [, varname3 ... [, varnameN]]]];
 `value1...N`  变量的初始化值。该值可以为任何合法表达式。
 
 #### 示例
-声明一个变量a并赋值为1。
+声明一个变量 a 并赋值为 1。
 ```javascript
 var a = 1;
 ```
-一个var中定义多个变量，如下方式中，b 隐式的创建了全局变量，在函数外还能访问。
+一个 var 中定义多个变量，如下方式中，b 隐式的创建了全局变量，在函数外还能访问。
 
 ```javascript
 function foo() {
@@ -131,23 +131,23 @@ foo();
 console.log(typeof a); // 'undefined'，只能在 foo 函数内使用
 console.log(typeof b); // 'number'，还能在 foo 函数外调用
 ```
-如下方式，a和b两个变量都只能在foo函数内使用。
+如下方式，a 和 b 两个变量都只能在 foo 函数内使用。
 ```javascript
 function foo() {
-    // 局部变量 a和b在foo函数外无法调用
+    // 局部变量 a 和 b 在 foo 函数外无法调用
     var a = 1, b = 1;
 }
 foo();
 
-console.log(typeof a); // 'undefined'，foo函数外不能调用
-console.log(typeof b); // 'undefined'，foo函数外不能调用
+console.log(typeof a); // 'undefined'，foo 函数外不能调用
+console.log(typeof b); // 'undefined'，foo 函数外不能调用
 ```
 ### try catch 语句
 
 
-`try`语句包含了由一个或者多个语句组成的`try`块， 和至少一个`catch`子句或者一个`finally`子句的其中一个，或者两个兼有。
+`try` 语句包含了由一个或者多个语句组成的 `try` 块， 和至少一个 `catch` 子句或者一个 `finally` 子句的其中一个，或者两个兼有。
 
-`try`的三种声明方式：
+`try` 的三种声明方式：
 
 1. try...catch
 2. try...finally
@@ -173,13 +173,13 @@ try {
 ```
 `try_statements`  需要被执行的语句。
 
-`catch_statements_1, catch_statements_2`  如果在try块里有异常被抛出时执行的语句。
+`catch_statements_1, catch_statements_2`  如果在 try 块里有异常被抛出时执行的语句。
 
-`exception_var_1, exception_var_2`   用于保存关联catch子句的异常对象的标识符。
+`exception_var_1, exception_var_2`   用于保存关联 catch 子句的异常对象的标识符。
 condition_1
 一个条件表达式。
 
-`finally_statements`  在try语句块之后执行的语句块。无论是否有异常抛出或捕获这些语句都将执行。
+`finally_statements`  在 try 语句块之后执行的语句块。无论是否有异常抛出或捕获这些语句都将执行。
 
 #### 示例
 
@@ -204,7 +204,7 @@ try {
     console.error("outer", e.message);  // 打印报错信息
 }
 
-// 上面try...catch语句执行结果
+// 上面 try...catch 语句执行结果
 "finally"
 "outer oops"
 ```
@@ -218,11 +218,11 @@ try {
     } finally {
         console.log("finally");  // 执行 finally
     }
-} catch (e) {   // 异常已经被内部catch捕获，这里没有异常可以捕获
+} catch (e) {   // 异常已经被内部 catch 捕获，这里没有异常可以捕获
     console.error("outer", e.message);
 }
 
-// 上面try...catch语句执行结果
+// 上面 try...catch 语句执行结果
 "inner oops"
 "finally"
 ```
@@ -241,7 +241,7 @@ try {
     console.error("outer", e.message);
 }
 
-// 上面try...catch语句执行结果
+// 上面 try...catch 语句执行结果
 "inner oops"
 "finally"
 "outer oops"
@@ -249,7 +249,7 @@ try {
 
 ### function 语句
 
-一个被函数声明创建的函数是一个 函数对象「Function对象」。
+一个被函数声明创建的函数是一个 函数对象「Function 对象」。
 
 默认情况下，函数是返回 `undefined` 的。想要返回一个其他的值，函数必须通过一个 return 语句指定返回值。
 
@@ -271,7 +271,7 @@ function name([param,[, param,[..., param]]]) {
 JavaScript 中的函数声明被提升到了函数定义，所以可以在函数声明之前使用该函数。如下：
 
 ```javascript
-// 使用function语句定义的函数对象叫做函数声明，函数声明会被预先处理。
+// 使用 function 语句定义的函数对象叫做函数声明，函数声明会被预先处理。
 fd(); // true
 
 function fd() {
@@ -279,7 +279,7 @@ function fd() {
     return true;
 }
 ```
-函数表达式function expressions 不会被提升，所以调用该函数会报 TypeError错误。
+函数表达式 function expressions 不会被提升，所以调用该函数会报 TypeError 错误。
 
 ```javascript
 // 函数表达式
@@ -289,22 +289,22 @@ var fe = function() {
     // do sth.
 };
 ```
-### for...in语句
+### for...in 语句
 
-`for...in`语句以任意顺序遍历一个对象的可枚举属性。
+`for...in` 语句以任意顺序遍历一个对象的可枚举属性。
 
 特点：
 
 1. 遍历的顺序不确定，具体的顺序依赖引擎的实现；
 
-2. `enumerable`为false时不会在`for...in`出现；
+2. `enumerable` 为 false 时不会在 `for...in` 出现；
 
-3. `for...in`对象属性会受原型链影响。
+3. `for...in` 对象属性会受原型链影响。
 
 #### 语法
 
 ```javascript
-for (variable in object) { 
+for (variable in object) {
     ...
 }
 ```
@@ -326,9 +326,9 @@ for (p in obj) {
 }
 ```
 
-### switch语句
+### switch 语句
 
-switch语句，将表达式的值与case子句匹配，并执行匹配到的语句。
+switch 语句，将表达式的值与 case 子句匹配，并执行匹配到的语句。
 
 #### 语法
 
@@ -351,9 +351,9 @@ switch (expression) {
 ```
 `expression`  一个用来与 case 子语句匹配的表达式。
 
-`case valueN` `可选`  用于匹配 expression 的 case 子句。如果 expression 与给定的 valueN 相匹配，则执行该 case 子句中的语句直到该 switch 语句结束或遇到一个 break 。
+`case valueN` ` 可选 `  用于匹配 expression 的 case 子句。如果 expression 与给定的 valueN 相匹配，则执行该 case 子句中的语句直到该 switch 语句结束或遇到一个 break 。
 
-`default` `可选`  一个 default 子句；如果给定，这条子句会在 expression 的值与任一 case 语句均不匹配时执行。
+`default` ` 可选 `  一个 default 子句；如果给定，这条子句会在 expression 的值与任一 case 语句均不匹配时执行。
 
 #### 示例
 
@@ -401,7 +401,7 @@ switch(val) {
         break;
     case 4:
     case 5:
-        console.log(45); 
+        console.log(45);
         break;
     default:
         console.log(0);
@@ -412,31 +412,31 @@ switch(val) {
 
 ### 循环语句
 
-`while`语句
+`while` 语句
 ```javascript
 while(isTrue) {
     // do sth.
 }
 ```
-`do...while`语句
+`do...while` 语句
 ```javascript
 do {
     // do sth.
 } while (isTrue)
 ```
-`for`语句
+`for` 语句
 ```javascript
 var i;
 for (i = 0; i < n; i++) {
     // do sth.
 }
 ```
-### with语句
-`with语句` 扩展一个语句的作用域链。
+### with 语句
+`with 语句 ` 扩展一个语句的作用域链。
 
-`with`语句缺点：
+`with` 语句缺点：
 
-- 让JS引擎优化更难
+- 让 JS 引擎优化更难
 - 可读性差
 - 可被变量定义代替
 - 严格模式下被禁用
