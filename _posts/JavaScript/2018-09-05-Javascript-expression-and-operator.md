@@ -145,14 +145,14 @@ obj.x;         // 1
 
 ```javascript
 window.x = 1;
-‘x’ in window; // true
+'x' in window; // true
 ```
 
 ### 运算符 instanceof, typeof
 
 ```javascript
 {} instanceof Object                // true
-typeof 100 === ‘number’ // true
+typeof 100 === 'number' // true
 
 ```
 ### 运算符 new
