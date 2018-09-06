@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Javascript 之表达式和运算符
+title: JavaScript 之表达式和运算符
 categories: JavaScript
 description: JavaScript 表达式和运算符
 keywords: JavaScript, Expression, Operator
@@ -15,7 +15,7 @@ JavaScript 有以下表达式类型（摘自 [《JavaScript 权威指南》](htt
 - 算数: 得出一个数字, 例如 3.14159. (通常使用 `arithmetic operators`.)
 - 字符串: 得出一个字符串, 例如, "Fred" 或 "234". (通常使用 `string operators`.)
 - 逻辑值: 得出 true 或者 false. (经常涉及到 `logical operators`.)
-- 基本表达式: javascript 中基本的关键字和一般表达式。
+- 基本表达式: JavaScript 中基本的关键字和一般表达式。
 - 左值表达式: 分配给左值。
 
 
