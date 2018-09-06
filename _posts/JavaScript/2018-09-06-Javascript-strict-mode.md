@@ -289,12 +289,21 @@ function func() {
 1. 不允许用 with
 
 1. 所有变量必须声明, 赋值给为声明的变量报错，而不是隐式创建全局变量。
+
 1. eval 中的代码不能创建 eval 所在作用域下的变量、函数。而是为 eval 单独创建一个作用域，并在 eval 返回时丢弃。
+
 1. 函数中得特殊对象 arguments 是静态副本，而不像非严格模式那样，修改 arguments 或修改参数变量会相互影响。
+
 1. 删除 configurable=false 的属性时报错，而不是忽略
+
 1. 禁止八进制字面量，如 010 (八进制的 8)
+
 1. eval, arguments 变为关键字，不可作为变量名、函数名等
+
 1. 一般函数调用时 (不是对象的方法调用，也不使用 apply/call/bind 等修改 this)this 指向 null，而不是全局对象。
+
 1. 若使用 apply/call，当传入 null 或 undefined 时，this 将指向 null 或 undefined，而不是全局对象。
+
 1. 试图修改不可写属性 (writable=false)，在不可扩展的对象上添加属性时报 TypeError，而不是忽略。
+
 1. arguments.caller, arguments.callee 被禁用
