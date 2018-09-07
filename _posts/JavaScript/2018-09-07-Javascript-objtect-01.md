@@ -20,9 +20,9 @@ JavaScript 提供多个内建对象，比如 String、Date、Array 等等。 对
 - 数组是一个对象
 - 甚至函数也可以是对象
 
-而对象中包含一系列的属性，这些属性是 ** 无序 ** 的。
+而对象中包含一系列的属性，这些属性是 **无序** 的。
 
-每一个属性都有一个 ** 字符串 **key 和对应的 value。
+每一个属性都有一个 **字符串** key 和对应的 value。
 
 ```javascript
 var obj = {x : 1, y : 2};
@@ -68,9 +68,9 @@ obj.x = 1;
 
 #### 2、对象的原型
 
-每个对象都有一个原型 **[[proto]]**
+每个对象都有一个原型 `[[proto]]`
 
-每一个函数都有一个对象属性 **prototype**
+每一个函数都有一个对象属性 `prototype`
 ```javascript
 function foo(){}
 // 给 foo 函数对象属性 prototype
@@ -128,13 +128,13 @@ foo.prototype.z = 3;
 
 使用 new 构造一个新的对象 obj，添加两个属性并赋值。
 
-使用 new 来构造对象，它的原型会指向构造器的 **prototype** 属性，也就是 **foo.prototype**.
-
 ```javascript
 var obj =new foo();
 obj.y = 2;
 obj.x = 1;
 ```
+使用 new 来构造对象，它的原型会指向构造器的 **prototype** 属性，也就是 **foo.prototype**。
+
 ![Javascript-object-04](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-04.png)
 
 
@@ -158,7 +158,7 @@ obj.hasOwnProperty('z'); // false, 对象 obj 没有属性'z'
 
 作用：通过原型链继承，继承原型上的属性和方法。
 
-当访问一个属性，这个对象上没有该属性，会通过原型链向上查找，一直找到 null，如果还没找到就返回 undefined。
+当访问一个属性，这个对象上没有该属性，会通过原型链向上查找，一直找到 `null`，如果还没找到就返回 `undefined`。
 
 > PS：obj.z 返回 undefined，不一定是没有 z 属性，也可能是 obj.z=undefined。也可能是向上查找原型链没找到返回 undefined。一个对象是否有某个属性，可以通过 in 或者 hasOwnProperty 方法来区分。如果这个时候想要拿到原型链上的 z 属性，则需要执行 `delete obj.z` 删除对象的 z 属性，在执行 obj.z 才能调用原型链上的 z 属性。
 
@@ -178,7 +178,7 @@ obj.hasOwnProperty('x'); // false
 
 ![Javascript-object-06](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-06.png)
 
-使用 ` 字面量 ` 创建的对象的原型指向 `Object.prototype`，所以在 `obj` 对象上可以调用 `obj.toString()` 方法。
+使用 `字面量` 创建的对象的原型指向 `Object.prototype`，所以在 `obj` 对象上可以调用 `obj.toString()` 方法。
 
 由于 `x` 属性是从原型链上继承来的，并不是 `obj` 对象本身的属性，所以 `obj.hasOwnProperty('x')` 返回 false。
 
@@ -249,7 +249,7 @@ obj.y; // undefined
 var yz = obj.y.z; // 读异常，Uncaught TypeError: Cannot read property 'z' of undefined
 obj.y.z = 2; // 写异常，Uncaught TypeError: Cannot set property 'z' of undefined
 ```
-obj.y 会查找原型链，一直找到末端是 null 还是没有的话就返回 undefined。
+obj.y 会查找原型链，一直找到末端是 `null` 还是没有的话就返回 `undefined`。
 
 obj.y.z，obj.y 不存在是 undefined，再去访问或者写入 z，就会报错不能 read 或者 set 一个 undefined 属性 z。
 
@@ -317,7 +317,7 @@ ohNo = 1;
 window.ohNo; // 1
 delete ohNo; // true
 ```
-** 小结 **
+**小结**
 
 - 对象属性和隐式创建的全局变量可以被删除。
 
