@@ -16,7 +16,7 @@ keywords: JavaScript, Object
 
 - set 语法将对象属性绑定到要调用的函数。
 
-### 1、属性 getter/setter 方法
+### 1. 属性 getter/setter 方法
 
 get/set 方法和其他属性区别很大， 以 get/set 关键字开头，紧接着对应的属性的名字，后面是个函数体，get/set 方法与一般属性之间是用逗号隔开的。
 
@@ -80,29 +80,29 @@ man.age = 150; // Error: Incorrect val = 150
 man.age = 'abc'; // Error: Incorrect val = NaN
 ```
 
-### 2、get/set 与原型链
+### 2. get/set 与原型链
 get/set 方法与原型链结合的情况
 
 `Object.defineProperty()` 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象。
 
 ```javascript
-// 1、创建一个空的 foo 函数，该函数有一个 foo.prototype 属性
+// 1. 创建一个空的 foo 函数，该函数有一个 foo.prototype 属性
 function foo() {}
 
-// 2、通过 Object.defineProperty() 方法给 foo 函数添加 z 属性和 get 方法
+// 2. 通过 Object.defineProperty() 方法给 foo 函数添加 z 属性和 get 方法
 Object.defineProperty(foo.prototype, 'z', {
     get: function () {
         return 1;
     }
 });
 
-// 3、使用 new 创建一个新对象 obj，该对象的原型会指向构造器的 prototype 属性，也就是 foo.prototype 属性
+// 3. 使用 new 创建一个新对象 obj，该对象的原型会指向构造器的 prototype 属性，也就是 foo.prototype 属性
 var obj = new foo();
 
-// 4、向上查找，找到一个 z 的 get 方法，返回 1
+// 4. 向上查找，找到一个 z 的 get 方法，返回 1
 obj.z; // 1
 
-// 5、没有给 obj 对象添加新属性 z，因为原型连上有 z 属性的 get/set 方法
+// 5. 没有给 obj 对象添加新属性 z，因为原型连上有 z 属性的 get/set 方法
 obj.z = 10; // 10
 obj.z; // 1
 ```
@@ -114,19 +114,19 @@ obj.z; // 1
 
 ```javascript
 // 继续上面的 js 代码
-// 6、给 obj 对象添加 z 属性，并设置 z 属性的值为 100，configurable 标签为 true（delete 操作需要）
+// 6. 给 obj 对象添加 z 属性，并设置 z 属性的值为 100，configurable 标签为 true（delete 操作需要）
 Object.defineProperty(obj, 'z', {
     value: 100,
     configurable: true
 });
 
-// 7、调用 obj.z 返回 100，证明 obj 对象有 z 属性
+// 7. 调用 obj.z 返回 100，证明 obj 对象有 z 属性
 obj.z; // 100;
 
-// 8、删除 obj 对象的 z 属性
+// 8. 删除 obj 对象的 z 属性
 delete obj.z; // true
 
-// 9、在原型链向上查找，返回原型链上的 z 属性
+// 9. 在原型链向上查找，返回原型链上的 z 属性
 obj.z; // 1
 ```
 对应的结构如下：
@@ -136,31 +136,31 @@ obj.z; // 1
 访问对象原型链上 `writable` 为 `false` 的属性时也是不可写的，此时也需要用 `Object.defineProperty()` 方法来给对象添加属性 `writable`、`configurable` 并且设置为 `true`。
 
 ```javascript
-// 1、定义一个空对象 o
+// 1. 定义一个空对象 o
 var o = {};
 
-// 2、给 o 对象定义属性 x，其他标签默认 false, 如：writable=false, configurable=false
+// 2. 给 o 对象定义属性 x，其他标签默认 false, 如：writable=false, configurable=false
 Object.defineProperty(o, 'x', {
     value: 100
 });
 
-// 3、通过 Object.create 创建对象 obj，以 o 对象作为原型
+// 3. 通过 Object.create 创建对象 obj，以 o 对象作为原型
 var obj = Object.create(o);
 
-// 4、访问 obj.x 返回 100，给其赋值之后还是 100，没有改变。
+// 4. 访问 obj.x 返回 100，给其赋值之后还是 100，没有改变。
 // 原因是原型链上的 x 属性是不可写的，所以不能修改 x 属性，也不能给 obj 对象添加新的属性 x
 obj.x; // 100
 obj.x = 200;
 obj.x; // 还是 100
 
-// 5、通过 Object.defineProperty() 方法给 obj 对象添加自己的 x 属性，并且设置为可写可删除，值为 100
+// 5. 通过 Object.defineProperty() 方法给 obj 对象添加自己的 x 属性，并且设置为可写可删除，值为 100
 Object.defineProperty(obj, 'x', {
     writable: true,
     configurable: true,
     value: 100
 });
 
-// 6、访问和修改 obj 对象自己的 x 属性
+// 6. 访问和修改 obj 对象自己的 x 属性
 obj.x; // 100
 obj.x = 500;
 obj.x; // 500
@@ -168,7 +168,7 @@ obj.x; // 500
 
 ## 二、属性标签
 
-### 1、关于属性标签
+### 1. 关于属性标签
 
 属性标签的权限设置，有 4 个描述其属性行为的特性（默认都为 false）：
 
@@ -181,7 +181,7 @@ obj.x; // 500
 - **Value**：属性的值。可以是任何有效的 JavaScript 值（数值，对象，函数等）。默认 `undefined`。
 
 
-### 2、查看对象属性标签
+### 2. 查看对象属性标签
 
 `Object.getOwnPropertyDescriptor()` 方法返回指定对象上一个自有属性对应的属性描述符。（自有属性指的是直接赋予该对象的属性，不需要从原型链上进行查找的属性）
 
@@ -308,7 +308,7 @@ person.promote = 2;
 person.salary; // 60000
 person.luck; // "good"
 ```
-### 3、configurable 和 writable
+### 3. configurable 和 writable
 
 属性的标签可以通过 `Object.defineProperty()` 方法重复设置
 
@@ -332,7 +332,7 @@ person.luck; // "good"
 
 ## 三、对象标签
 
-### 1、[[proto]]
+### 1. [[proto]]
 
 `Object.prototype.__proto__`  指向当对象被实例化的时候，用作原型的对象。
 
@@ -341,7 +341,7 @@ person.luck; // "good"
 
 ![Javascript-object-13](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-13.png)
 
-### 2、[[class]]
+### 2. [[class]]
 
 `class` 标签没有一个直接的方式去查看它或者是修改它。
 
@@ -372,7 +372,7 @@ getType(true); // "Boolean"
 getType(new Boolean(true)); // "Boolean"
 ```
 
-### 3、[[extensible]]
+### 3. [[extensible]]
 
 `extensible` 对象标签表示对象是否可扩展，也就是说，对象是否可以继续添加属性。
 
@@ -516,7 +516,7 @@ JSON.stringify(obj); // "{"x":1,"y":2,"o":3}"
 
 ## 五、其它对象方法
 
-### 1、toString()
+### 1. toString()
 
 调用对象的 `toString()` 方法默认返回 `[object Object]`
 
@@ -536,7 +536,7 @@ obj.toString = function () {
 +obj; // 3
 ```
 
-### 2、valueOf()
+### 2. valueOf()
 
 自定义如下 `valueOf` 方法
 

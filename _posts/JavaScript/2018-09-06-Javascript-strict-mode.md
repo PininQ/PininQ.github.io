@@ -61,7 +61,7 @@ function func() {
 ### 2. 严格模式下不允许用 with
 
 ```javascript
-// 1、非严格模式
+// 1. 非严格模式
 !function() {
 	 with({x : 1}) {
            console.log(x);
@@ -69,7 +69,7 @@ function func() {
 }();
 // 结果为 1
 // ----------------- 分割线 -------------------
-// 2、严格模式
+// 2. 严格模式
 !function() {
 	'use strict';
 	 with({x : 1}) {
@@ -82,7 +82,7 @@ function func() {
 ### 3. 严格模式下不允许未声明的变量被赋值
 
 ```javascript
-// 1、非严格模式
+// 1. 非严格模式
 ! function () {
     // 相当于声明了一个全局变量
     a = 1;
@@ -90,7 +90,7 @@ function func() {
 }();
 // 结果为 1
 // ----------------- 分割线 -------------------
-// 2、严格模式
+// 2. 严格模式
 ! function () {
     'use strict';
     // 给没有声明过的变量 a 赋值，在严格模式下会报错。
@@ -104,7 +104,7 @@ function func() {
 ### 4. arguments 变为参数的静态副本
 
 ```javascript
-// 1、一般模式
+// 1. 一般模式
 ! function (a) {
     // a 和 arguments[0] 有相互绑定的关系，所以修改 arguments[0]，对应的形参 a 也会被修改
     arguments[0] = 100;
@@ -115,7 +115,7 @@ function func() {
 
 // ----------------- 分割线 -------------------
 
-// 2、严格模式
+// 2. 严格模式
 ! function (a) {
     'use strict';
     // arguments 变为参数的静态副本，所以 a 和 arguments[0] 没有相互的绑定关系，不会相互影响
@@ -126,7 +126,7 @@ function func() {
 
 // ----------------- 分割线 -------------------
 
-// 3、严格模式，参数是对象
+// 3. 严格模式，参数是对象
 ! function (a) {
     'use strict';
     // 如果传入的参数是对象，修改对象的属性，a 和 arguments[0] 还是会相互影响。
@@ -141,7 +141,7 @@ function func() {
 
 
 ```javascript
-// 1、一般模式
+// 1. 一般模式
 !function(a) {
     // 视图去删除参数或者函数名
 	console.log(delete a);
@@ -150,7 +150,7 @@ function func() {
 
 // ----------------- 分割线 -------------------
 
-// 2、严格模式
+// 2. 严格模式
 ! function (a) {
     'use strict';
     delete a;
@@ -162,7 +162,7 @@ function func() {
 ### 6. delete 不可配置的属性报错
 
 ```javascript
-// 1、一般模式
+// 1. 一般模式
 ! function (a) {
     var obj = {};
     // 定义一个带有属性描述器的属性
@@ -178,7 +178,7 @@ function func() {
 
 // ----------------- 分割线 -------------------
 
-// 2、严格模式
+// 2. 严格模式
 ! function (a) {
     'use strict';
     var obj = {};
@@ -195,7 +195,7 @@ function func() {
 ### 7. 对象字面量重复属性名报错
 
 ```javascript
-// 1、一般模式
+// 1. 一般模式
 ! function () {
     // 定义了重复的属性名，属性值以最后一个为准
     var obj = {
@@ -208,7 +208,7 @@ function func() {
 
 // ----------------- 分割线 -------------------
 
-// 2、严格模式
+// 2. 严格模式
 ! function () {
     'use strict';
     var obj = {
@@ -220,7 +220,7 @@ function func() {
 ```
 ### 8. 禁止八进制字面量
 ```javascript
-// 1、一般模式
+// 1. 一般模式
 ! function () {
     console.log(0123);
 }();
@@ -228,7 +228,7 @@ function func() {
 
 // ----------------- 分割线 -------------------
 
-// 2、严格模式
+// 2. 严格模式
 ! function () {
     'use strict';
     console.log(0123);
@@ -239,7 +239,7 @@ function func() {
 ### 9. eval, arguments 变为关键字，不能作为变量、函数名
 
 ```javascript
-// 1、一般模式
+// 1. 一般模式
 ! function () {
     function eval() {}
     console.log(eval);
@@ -248,7 +248,7 @@ function func() {
 
 // ----------------- 分割线 -------------------
 
-// 2、严格模式
+// 2. 严格模式
 ! function () {
     'use strict';
 
@@ -261,7 +261,7 @@ function func() {
 ### 10. 严格模式下 eval 变成独立作用域
 
 ```javascript
-// 1、一般模式
+// 1. 一般模式
 ! function () {
     // eval 中定义一个变量
     eval('var evalVal = 2;');
@@ -272,7 +272,7 @@ function func() {
 
 // ----------------- 分割线 -------------------
 
-// 2、严格模式
+// 2. 严格模式
 ! function () {
     'use strict';
     eval('var evalVal = 2;');

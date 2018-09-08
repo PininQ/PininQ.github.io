@@ -51,7 +51,7 @@ obj; // 结果为 {1: 2, 2: 3, [object Object]: true}
 
 ### 对象的结构
 
-#### 1、对象属性的结构
+#### 1. 对象属性的结构
 - 对象的属性可以动态添加和删除
 - 对象的每个属性都有很多的属性标签
 
@@ -66,7 +66,7 @@ obj.x = 1;
 
 ![Javascript-object-01](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-01.png)
 
-#### 2、对象的原型
+#### 2. 对象的原型
 
 每个对象都有一个原型 `[[proto]]`
 
@@ -82,7 +82,7 @@ var obj =new foo();
 
 ![Javascript-object-02](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-02.png)
 
-#### 3、对象的标签
+#### 3. 对象的标签
 
 对象除了 `[[proto]]` 标签还有 `[[class]]` 标签和 `[[extensible]]` 标签。
 
@@ -96,7 +96,7 @@ var obj =new foo();
 
 ## 二、创建对象和原型链
 
-### 1、对象创建 - 字面量
+### 1. 对象创建 - 字面量
 使用花括号括起来设置属性
 ```javascript
 var obj1 = {
@@ -115,7 +115,7 @@ var obj2 = {
     }
 };
 ```
-### 2、对象创建 - new / 原型链
+### 2. 对象创建 - new / 原型链
 
 通过 function foo 定义一个函数对象，函数对象 foo 默认带一个 **prototype** 属性。**prototype** 属性是一个对象的属性。
 
@@ -162,7 +162,7 @@ obj.hasOwnProperty('z'); // false, 对象 obj 没有属性'z'
 
 > PS：obj.z 返回 undefined，不一定是没有 z 属性，也可能是 obj.z=undefined。也可能是向上查找原型链没找到返回 undefined。一个对象是否有某个属性，可以通过 in 或者 hasOwnProperty 方法来区分。如果这个时候想要拿到原型链上的 z 属性，则需要执行 `delete obj.z` 删除对象的 z 属性，在执行 obj.z 才能调用原型链上的 z 属性。
 
-### 3、对象创建 - Object.create
+### 3. 对象创建 - Object.create
 
 `Object.create` 是一个系统内置的函数，这个函数会接受一个参数，一般是一个对象，它会返回新创建的对象，并且让这个对象的原型指向这个对象。
 
@@ -196,7 +196,7 @@ obj.toString // undefined
 
 ## 三、属性操作
 
-### 1、属性读写
+### 1. 属性读写
 
 属性的读写可以通过 `.` 或者 `[]` 操作符。
 
@@ -238,7 +238,7 @@ for (p in obj) {
 ```
 ![Javascript-object-08](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-08.png)
 
-### 2、属性读写 - 异常
+### 2. 属性读写 - 异常
 
 
 ```javascript
@@ -268,7 +268,7 @@ if (obj.y) {
 var yz = obj && obj.y && obj.y.z;
 ```
 
-### 3、删除属性
+### 3. 删除属性
 
 （1）删除对象属性
 
@@ -323,7 +323,7 @@ delete ohNo; // true
 
 - Object 属性，var 声明的全局变量和局部变量，全局函数和局部函数都是不可被删除的。
 
-### 4、属性检测
+### 4. 属性检测
 
 ```javascript
 // 定义一个对象，并添加属性
@@ -377,7 +377,7 @@ if (dog.bones !== undefined) {
 }
 ```
 
-### 5、属性枚举
+### 5. 属性枚举
 
 
 ```javascript
