@@ -168,7 +168,7 @@ obj.x; // 500
 
 ## 二、属性标签
 
-### 关于属性标签
+### 1、关于属性标签
 
 属性标签的权限设置，有 4 个描述其属性行为的特性（默认都为 false）：
 
@@ -181,7 +181,7 @@ obj.x; // 500
 - **Value**：属性的值。可以是任何有效的 JavaScript 值（数值，对象，函数等）。默认 `undefined`。
 
 
-### 查看对象属性标签
+### 2、查看对象属性标签
 
 `Object.getOwnPropertyDescriptor()` 方法返回指定对象上一个自有属性对应的属性描述符。（自有属性指的是直接赋予该对象的属性，不需要从原型链上进行查找的属性）
 
@@ -308,7 +308,7 @@ person.promote = 2;
 person.salary; // 60000
 person.luck; // "good"
 ```
-### configurable 和 writable
+### 3、configurable 和 writable
 
 属性的标签可以通过 `Object.defineProperty()` 方法重复设置
 
@@ -332,7 +332,7 @@ person.luck; // "good"
 
 ## 三、对象标签
 
-### [[proto]]
+### 1、[[proto]]
 
 `Object.prototype.__proto__`  指向当对象被实例化的时候，用作原型的对象。
 
@@ -341,7 +341,7 @@ person.luck; // "good"
 
 ![Javascript-object-13](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-13.png)
 
-### [[class]]
+### 2、[[class]]
 
 `class` 标签没有一个直接的方式去查看它或者是修改它。
 
@@ -372,7 +372,7 @@ getType(true); // "Boolean"
 getType(new Boolean(true)); // "Boolean"
 ```
 
-### [[extensible]]
+### 3、[[extensible]]
 
 `extensible` 对象标签表示对象是否可扩展，也就是说，对象是否可以继续添加属性。
 
