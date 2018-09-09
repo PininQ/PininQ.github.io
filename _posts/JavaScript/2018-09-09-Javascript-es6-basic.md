@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ECMAScript6 基础语法
+title: ES3、ES5、ES6 部分语法对比
 categories: JavaScript
 description: ECMAScript6 基础语法
 keywords: JavaScript, ECMAScript6
