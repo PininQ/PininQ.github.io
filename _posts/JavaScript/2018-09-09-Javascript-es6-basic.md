@@ -212,7 +212,7 @@ var factory = function () {
 
 console.log(new factory().c.b()) // a+
 ```
-上面代码中，` 函数 b` 是 `c` 调用的，`c` 本身是一个对象，所以 `this` 指向的是 `c`，而 `c` 中的 ` 属性 a` 的值是 `a+`，所以 `this.a` 是 `a+`
+上面代码中，` 函数 b` 是 `c` 调用的，`c` 本身是一个对象，所以 `this` 指向的是 `c`，而 `c` 中的属性 `a` 的值是 `a+`，所以 `this.a` 是 `a+`。
 
 #### 4. ES6 中的 this
 
