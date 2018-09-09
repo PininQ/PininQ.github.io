@@ -24,9 +24,9 @@ ES6 的好处，ES6 弥补了很多 ES3、ES5 功能上的不足，比如常量�
 
 ### 常量
 
-1. ES3 中没有常量的概念
+#### 1. ES3 中没有常量的概念
 
-2. ES5 中常量的写法
+#### 2. ES5 中常量的写法
 
 ```javascript
 Object.defineProperty(window, "name", {
@@ -37,7 +37,7 @@ Object.defineProperty(window, "name", {
 console.log(window.name) // 'QinBin'
 ```
 
-3. ES6 中常量的写法
+#### 3. ES6 中常量的写法
 
 ```javascript
 const NAME = 'QinBin'
@@ -48,7 +48,7 @@ NAME = 'QB'
 ```
 
 ### 作用域
-1. ES5 中的作用域
+#### 1. ES5 中的作用域
 
 ```javascript
 const callbacks = []
@@ -72,7 +72,7 @@ ES5 中有函数作用域，本例子中的 callbacks 内部 function 形成一�
 
 ![ES6-01](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/ES6/ES6-01.png)
 
-2. ES6 中的作用域
+#### 2. ES6 中的作用域
 
 ```javascript
 const callbacks = []
@@ -96,7 +96,7 @@ console.table([
 
 ![ES6-02](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/ES6/ES6-02.png)
 
-3. ES5 中的块作用域
+#### 3. ES5 中的块作用域
 
 在 ES5 中要保证一块代码所要执行的作用域问题是通过立即执行函数实现的。
 
@@ -122,7 +122,7 @@ console.table([
 而上面的两个常量 const 一样没有报错是因为这两个 const 常量被两个立即执行函数给隔离开了。
 它们处在不同的作用域中，所以并不会受影响。
 
-3. ES6 中的块作用域
+#### 4. ES6 中的块作用域
 
 ES6 中有块作用域，只需要一对花括号 `{}`，就可以解决块作用域的问题。
 
@@ -171,7 +171,7 @@ function a() {
 
 }
 ```
-### 1. ES3/ES5 中关于数组的遍历
+#### 1. ES3/ES5 中关于数组的遍历
 
 ```javascript
 var evens = [1, 2, 3, 4, 5]
@@ -182,7 +182,7 @@ console.log(evens) // [1, 2, 3, 4, 5]
 console.log(odds) // [1, 4, 9, 16, 25]
 ```
 
-### 2. ES6 中关于数组的遍历
+#### 2. ES6 中关于数组的遍历
 
 ```javascript
 let evens = [1, 2, 3, 4, 5]
@@ -191,7 +191,7 @@ console.log(evens) // [1, 2, 3, 4, 5]
 console.log(odds) // [1, 4, 9, 16, 25]
 ```
 
-### 3. ES3/ES5 中的 this
+#### 3. ES3/ES5 中的 this
 
 this 的指向是该函数被调用的对象。也就是说，函数被执行的时候，这个 this 指向的是调用
 该函数的对象。
@@ -214,7 +214,7 @@ console.log(new factory().c.b()) // a+
 ```
 上面代码中，` 函数 b` 是 `c` 调用的，`c` 本身是一个对象，所以 `this` 指向的是 `c`，而 `c` 中的 ` 属性 a` 的值是 `a+`，所以 `this.a` 是 `a+`
 
-### 4. ES6 中的 this
+#### 4. ES6 中的 this
 
 ```javascript
 var factory = function () {
@@ -236,14 +236,14 @@ console.log(new factory().c.b()) // a
 `new factory().c.b()` 中调用了 b 对象，但是 b 对象中指向的是构造函数的实例，
 这个实例就是 `new factory()`，而 `new factory()` 实例的属性 a 的值是 `a`，所以返回的 `this.a` 值为 `a`
 
-### 小结
+#### 小结
 
 箭头函数解决了 this 指向不明确，避免 this 在运行的时候 this 指向不确定的问题。
 
 
 ### 默认参数
 
-### 1. ES3/ES5 中默认参数写法
+#### 1. ES3/ES5 中默认参数写法
 
 
 ```javascript
@@ -264,7 +264,7 @@ console.log(f(1, 3)) // 46
 
 可以看出，写法比较麻烦，如果参数很多的话这个默认参数的写法会相当繁琐。
 
-### 2. ES6 中默认参数写法
+#### 2. ES6 中默认参数写法
 
 ```javascript
 // ES6 默认参数的写法
@@ -277,7 +277,7 @@ console.log(f(1, 3)) // 46
 ```
 可见，简短了很多
 
-### 3. ES6 中默认参数写法
+#### 3. ES6 中默认参数写法
 
 ```javascript
 // ES6 默认参数的写法 + 必要参数的检查
@@ -302,7 +302,7 @@ try {
 当 x 没有赋值，就会执行默认参数 checkParameter()，checkParameter() 是一个函数，
 这个函数一致性，就抛出了一个异常，从而达到了检查参数为空的检查的效果。
 
-### 4. ES3/ES5 可变参数
+#### 4. ES3/ES5 可变参数
 
 ```javascript
 function f() {
@@ -322,7 +322,7 @@ arguments 是一个伪数组，指向的是当前函数的参数列表，
 通过 arguments 来获取当前函数的参数列表，然后进行
 循环的运算，实现可变参数的求和运算。
 
-### 4. ES6 实现可变参数
+#### 5. ES6 实现可变参数
 
 ```javascript
 function f(...a) {
@@ -337,7 +337,7 @@ console.log(f(1, 2, 3, 45)) // 51
 ```
 `...` 是一个扩展运算符，`...a` 表示可变参数的列表
 
-### 5. ES5 合并两个数组
+#### 6. ES5 合并两个数组
 
 ```javascript
 var params = ['hello', true, 7]
@@ -345,7 +345,7 @@ var other = [1, 2].concat(params)
 console.log(other) // [1, 2, "hello", true, 7]
 ```
 
-### 6. ES6 利用扩展运算符合并数组
+#### 7. ES6 利用扩展运算符合并数组
 
 
 ```javascript
@@ -356,7 +356,7 @@ console.log(other) // [1, 2, "hello", true, 7]
 
 ### 对象代理
 
-### 1. ES3/ES5 数据保护
+#### 1. ES3/ES5 数据保护
 
 ```javascript
 // 声明 Person 函数对象
@@ -414,7 +414,7 @@ try {
 
 ![ES6-03](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/ES6/ES6-03.png)
 
-### 2. ES5 数据保护
+#### 2. ES5 数据保护
 
 ```javascript
 // 声明一个对象
@@ -462,7 +462,7 @@ try {
 ![ES6-04](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/ES6/ES6-04.png)
 
 
-### ES6 对象代理
+#### ES6 对象代理
 
 Proxy 用于修改某些操作的默认行为，等同于在语言层面做出修改，所以属于一种 “元编程”（meta programming），即对编程语言进行编程。
 
