@@ -6,7 +6,6 @@ description: 记录刚进入贺院的事情，以及后来的事情
 keywords: 大学
 ---
 
-![test](http://h1.ioliu.cn/bing/BrazilianPine_EN-AU10074166204_1920x1080.jpg)
 
 ## 前言
 
@@ -17,6 +16,7 @@ keywords: 大学
 
 从现在开始，计划每周 1~3 篇博客，主要是对自己所学东西的一些记录，增进自己对一些技术的认知。
 
+![test](http://h1.ioliu.cn/bing/BrazilianPine_EN-AU10074166204_1920x1080.jpg)
 
 ## 介绍
 说一下自己大学生活。首先介绍下 7-321 的基友们：
