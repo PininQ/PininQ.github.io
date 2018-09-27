@@ -251,7 +251,7 @@ obj.y.z = 2; // 写异常，Uncaught TypeError: Cannot set property 'z' of undef
 ```
 obj.y 会查找原型链，一直找到末端是 `null` 还是没有的话就返回 `undefined`。
 
-obj.y.z，obj.y 不存在是 undefined，再去访问或者写入 z，就会报错不能 read 或者 set 一个 undefined 属性 z。
+obj.y 和 obj.y.z 不存在，值为 undefined，对 obj.y 进行访问或者写入 z，就会报错不能 read 或者 set 一个 undefined 属性 z。
 
 在读取某一个属性的时候，可以先判断对象是否为空。
 
