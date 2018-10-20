@@ -55,14 +55,12 @@ if (true) {
 {
     a: 1,
     b: 2
-}
-// {a: 1, b: 2}
+} // {a: 1, b: 2}
 
 var o = {
     a: 1,
     b: 2
-};
-// o = {a: 1, b: 2}
+}; // o = {a: 1, b: 2}
 ```
 
 JavaScript 中没有块级作用域。在块里定义变量跟在块外面定义的一样。以下两种方式是等价的
@@ -281,9 +279,7 @@ function fd() {
     return true;
 }
 ```
-函数表达式 (function expressions) 不会被提升，所以调用该函数会报 TypeError 错误。
-
-> var fe 声明部分提升，其它没有提升。
+函数表达式 function expressions 不会被提升，所以调用该函数会报 TypeError 错误。
 
 ```javascript
 // 函数表达式
