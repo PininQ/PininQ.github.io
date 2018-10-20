@@ -24,7 +24,7 @@ JavaScript 常用数据类型如下：
 
 - 空类型 (null): 用于表明某个变量的值为空。
 
-- 对象类型 (object):javacsript 中的对象、数组等。
+- 对象类型 (object): javacsript 中的对象、数组等。
 
 其中，
 
@@ -80,10 +80,10 @@ new Object() == new Object()  //  false，JS 对象比较是比较引用，而�
     - null == null
     - undefined == undefined
 - 类型不同，尝试类型转换和比较:
-    - null == undefined 相等  // true
-    - number == string 转 number     1 == '1.0' // true
-    - boolean == ?  转 number        1 == true  // true
-    - object == number | string 尝试对象转为基本类型  new String('hi') == 'hi' // true
+    - `null == undefined` 相等  // true
+    - `number == string` 转 number     1 == '1.0' // true
+    - `boolean == ?`  转 number        1 == true  // true
+    - `object == number | string` 尝试对象转为基本类型  new String('hi') == 'hi' // true
     - 其它：false
 
 
@@ -108,18 +108,18 @@ new Object() == new Object()  //  false，JS 对象比较是比较引用，而�
 
 **实例：**
 ```javascript
-typeof 100   // number
-typeof true   // boolean
+typeof 100              // number
+typeof true             // boolean
 typeof function () {}   // function
-typeof(undefined) )   // undefined
-typeof(new Object() )   // object
-typeof([1， 2] )   // object
-typeof(NaN)   // number
-typeof(null)   // object，
+typeof (undefined))     // undefined
+typeof (new Object())   // object
+typeof ([1， 2])        // object
+typeof (NaN)            // number
+typeof (null)           // object
 ```
 - **instanceof**
 
-通过 `{}.toString` 拿到，适合内置对象和基元类型，遇到 `null` 和 `undefined` 失效 (IE678 等返回 [object Object])。
+通过 `{}.toString` 拿到，适合内置对象和基元类型，遇到 `null` 和 `undefined` 失效 (IE678 等返回 `[object Object]`)。
 
 **实例：**
 
