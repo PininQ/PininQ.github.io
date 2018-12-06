@@ -23,7 +23,7 @@ mathjax: true
 <https://mazhuang.org>
 ```
 
-[靠谱-ing](https://mazhuang.org)  
+[靠谱-ing](https://mazhuang.org)
 
 <https://mazhuang.org>
 
@@ -56,6 +56,11 @@ mathjax: true
 * 无序列表项 2
 
 * 无序列表项 3
+
+```
+- [x] 任务列表 1
+- [ ] 任务列表 2
+```
 
 - [x] 任务列表 1
 - [ ] 任务列表 2
