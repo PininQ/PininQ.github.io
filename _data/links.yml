@@ -1,14 +1,20 @@
 - name: 码志
   url: http://mazhuang.org
 
-- name: V2EX
-  url: http://jp.v2ex.com/
-
 - name: stackoverflow
   url: https://stackoverflow.com/
 
+- name: V2EX
+  url: http://jp.v2ex.com/
+
 - name: segmentfault
   url: https://segmentfault.com/
+
+- name: 掘金
+  url: https://juejin.im/timeline
+
+- name: 知乎
+  url: https://www.zhihu.com/
 
 - name: 德问
   url: http://www.dewen.net.cn/
