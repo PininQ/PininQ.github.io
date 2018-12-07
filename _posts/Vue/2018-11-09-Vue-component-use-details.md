@@ -92,10 +92,10 @@ keywords: Vue, 组件
 
 看样子，结果出错了。一切并未如我们所预料的那样，子组件的内容渲染在 table 标签中。
 
-三个 tr 应该在 tbody 中，现在 tr 却跑到了 table 外面。
+3 个 `tr` 应该在 `tbody` 中，现在 `tr` 却跑到了 `table` 外面。
 
-在 HTML5 的规范里面，要求 table 里面有 tbody，tbody 里面必须得放 tr，而现在，我们使用子组件，
-原本放 tr 的位置放了子组件 row，所以浏览器在解析 row 的时候，就会出现这种问题。
+在 HTML5 的规范里面，要求 `table` 里面有 `tbody`，`tbody` 里面必须得放 `tr`，而现在，我们使用子组件，
+原本放 `tr` 的位置放了子组件 `row`，所以浏览器在解析 `row` 的时候，就会出现这种问题。
 
 解决的办法是使用 Vue 给我们提供的 `is` 属性。
 
@@ -127,12 +127,12 @@ keywords: Vue, 组件
 
 ![Vue-component-use-details-02](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Vue/Vue-component-use-details/Vue-component-use-details-02.png)
 
-在 tbody 中，要使用一个组件，但是不能直接写组件的名字，可以使用 `is` 属性，虽然写的是 tr，
-但是实际上它是一个 row 的组件。
+在 `tbody` 中，要使用一个组件，但是不能直接写组件的名字，可以使用 `is` 属性，虽然写的是 `tr`，
+但是实际上它是一个 `row` 的组件。
 
 这样写的好处：
-- tr 中使用的是子组件
-- 符合 HTML5 的编码规范
+- `tr` 中使用的是子组件
+- 符合 `HTML5` 的编码规范
 
 除了 table 中的 tbody 不建议直接使用子组件，还有 ul、ol、select。这就是使用 is 标签解决模板上出现的一些 BUG 的问题。
 
@@ -238,5 +238,5 @@ div 标签中使用 ref 的代码如下：
 ![Vue-component-use-details-04](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Vue/Vue-component-use-details/Vue-component-use-details-04.gif)
 
 小结：
-- 当在 `div标签` 上使用 ref 的时候，通过 `this.$refs.ref` 获取到的是标签对应的 DOM
+- 当在 `div 标签` 上使用 ref 的时候，通过 `this.$refs.ref` 获取到的是标签对应的 DOM
 - 当在 `组件` 上使用 ref 的时候 ，通过 `this.$refs.ref` 获取到的是子组件的引用
