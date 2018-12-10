@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flask学习笔记7--数据库基本操作
+title: Flask 学习笔记 7-- 数据库基本操作
 categories: Flask
 description: 数据库基本操作
 keywords: Python, Flask, SQLAlchemy

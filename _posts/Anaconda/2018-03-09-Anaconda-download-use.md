@@ -23,19 +23,19 @@ Anaconda 是 Python 的一个发行版，如果把 Python 比作 Linux，那么 
 
 ```python
 # 基于 python3.6 创建一个名为 test_py3 的环境
-conda create --name test_py3 python=3.6 
- 
+conda create --name test_py3 python=3.6
+
 # 基于 python2.7 创建一个名为 test_py2 的环境
 conda create --name test_py2 python=2.7
- 
+
 # 激活 test 环境
 activate test_py2 # windows
 source activate test_py2 # linux/mac
- 
+
 # 切换到 python3
 activate test_py3
 
-# 切换回 py2 
+# 切换回 py2
 deactivate py3 # 重新输入 spyder 等命令即可
 source deactivate py3  # linux/mac
 ```
@@ -56,11 +56,11 @@ conda install -n py3 jupyter
 
 conda 的包管理功能是对 pip 的一种补充，如果当前已经激活了某个 Python 环境，那么就可以在当前环境开始安装第三方包。
 ```python
-# 安装 matplotlib 
+# 安装 matplotlib
 conda install matplotlib
 
 # 查看已安装的包
-conda list 
+conda list
 
 # 包更新
 conda update matplotlib

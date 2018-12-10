@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Flask学习笔记6--Flask中使用数据库
+title: Flask 学习笔记 6--Flask 中使用数据库
 categories: Flask
-description: SQLAlchemy的基本使用
+description: SQLAlchemy 的基本使用
 keywords: Python, Flask, SQLAlchemy
 ---
 

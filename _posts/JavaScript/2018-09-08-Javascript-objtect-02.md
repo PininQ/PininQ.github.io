@@ -198,7 +198,7 @@ Object.getOwnPropertyDescriptor(obj, prop)
 
 #### 示例
 
-**示例 2-1**
+** 示例 2-1**
 
 ```javascript
 // 第一个参数要判断的对象，第二个参数要查看属性名，返回一个对象
@@ -209,7 +209,7 @@ Object.getOwnPropertyDescriptor({pro: true}, 'pro');
 Object.getOwnPropertyDescriptor({pro: true}, 'a');
 // undefined
 ```
-**示例 2-2**
+** 示例 2-2**
 ```javascript
 // 创建一个空对象
 var person = {};
@@ -239,7 +239,7 @@ Object.defineProperty(person, 'type', {
 // 查看 person 对象的 key
 Object.keys(person); // ["name"]，type 属性是不可枚举，所以没有显示 type 属性。
 ```
-**示例 2-3**
+** 示例 2-3**
 
 ```javascript
 // 通过 Object.defineProperties 一次创建多个属性
@@ -267,7 +267,7 @@ Object.getOwnPropertyDescriptor(person, 'salary');
 Object.getOwnPropertyDescriptor(person, 'language');
 // {value: "JavaScript", writable: false, enumerable: true, configurable: false}
 ```
-**示例 2-4**
+** 示例 2-4**
 
 ```javascript
 // 创建一个空对象
@@ -454,7 +454,7 @@ JSON.stringify(value[, replacer [, space]])
 
 ### 示例
 
-**示例 4-1**
+** 示例 4-1**
 
 ```javascript
 var obj = {
@@ -465,7 +465,7 @@ var obj = {
 };
 JSON.stringify(obj); // "{"x":1,"y":true,"z":[1,2,3],"nullVal":null}"
 ```
-**示例 4-2**
+** 示例 4-2**
 
 序列化的一些注意点：
 
@@ -484,7 +484,7 @@ obj = {
 };
 JSON.stringify(obj); // "{"a":null,"b":null,"c":"2018-09-07T13:04:35.142Z"}"
 ```
-**示例 4-3**
+** 示例 4-3**
 
 通过 `JSON.pars()` 方法将 JSON 数据转换成 JavaScript 对象。
 
@@ -492,7 +492,7 @@ JSON.stringify(obj); // "{"a":null,"b":null,"c":"2018-09-07T13:04:35.142Z"}"
 obj = JSON.parse('{"x": 1}');
 obj.x; // 1
 ```
-**示例 4-4**
+** 示例 4-4**
 
 自定义序列化
 
@@ -553,7 +553,7 @@ obj.valueOf = function () {
 
 > PS：
 >
->当 toString 和 valueOf 都存在的时候，不管是一元的加号 (+) 还是二元的作为字符串拼接的的加号(+)，在做具体操作的时候都会尝试把对象转化为基本类型。
+> 当 toString 和 valueOf 都存在的时候，不管是一元的加号 (+) 还是二元的作为字符串拼接的的加号 (+)，在做具体操作的时候都会尝试把对象转化为基本类型。
 >
 > 在进行如上操作时，会先去找 valueOf，如果 valueOf 返回的是基本类型的话，就以 valueOf 的值作为结果，反之如果 valueOf 不存在或者返回的是对象这样一个不合法的值，就会去找 toString。如果 toString 和 valueOf 都没有，或者都返回了对象，那么就会报错。
 

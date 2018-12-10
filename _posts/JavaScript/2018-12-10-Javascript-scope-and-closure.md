@@ -49,7 +49,7 @@ var a = {
   }
 }
 a.fn() // this === a
-a.fn.call({ name: 'B' }) // this === {name: 'B'}
+a.fn.call({name: 'B'}) // this === {name: 'B'}
 var fn1 = a.fn
 fn1() // this === window
 ```
@@ -87,19 +87,19 @@ function fn1(name, age) {
   alert(name)
   console.log(this)
 }
-fn1.call({ x: 100 }, 'zhangsan', 20) // zhangsan
+fn1.call({x: 100}, 'zhangsan', 20) // zhangsan
 
 function fn1(name, age) {
   alert(name)
   console.log(this)
 }
-fn1.apply({ x: 100 }, ['zhangsan', 20]) // zhangsan
+fn1.apply({x: 100}, ['zhangsan', 20]) // zhangsan
 
 // bind
 var fn2 = function(name, age) {
   alert(name)
   console.log(this)
-}.bind({ y: 200 })
+}.bind({y: 200})
 fn2('zhangsan', 20) // zhangsan
 ```
 

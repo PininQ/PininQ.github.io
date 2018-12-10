@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Flask学习笔记8--Flask的综合小案例
+title: Flask 学习笔记 8--Flask 的综合小案例
 categories: Flask
-description: Flask的综合小案例，包含基本的CRUD操作
+description: Flask 的综合小案例，包含基本的 CRUD 操作
 keywords: Python, Flask
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Flask学习笔记5--WTF表单
+title: Flask 学习笔记 5--WTF 表单
 categories: Flask
-description: WTF表单的基本了解和使用
+description: WTF 表单的基本了解和使用
 keywords: Python, Flask, 过滤器
 ---
 
@@ -110,7 +110,7 @@ def index():
         elif password != password2:
             # print '密码不一致'
             flash(u'密码不一致')
-        
+
         # 4. 没有问题就返回'success'
         else:
             print password

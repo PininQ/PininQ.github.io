@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flask学习笔记2--路由定义的基本方式
+title: Flask 学习笔记 2-- 路由定义的基本方式
 categories: Flask
 description: 路由定义的基本方式
 keywords: Python, Flask, 路由
@@ -57,7 +57,7 @@ def index():
 
 
 # 使用同一个视图函数，来显示不同用户的订单信息
-# <定义路由的参数>。<>内需要起个名字
+# <定义路由的参数>。<> 内需要起个名字
 @app.route('/orders/<int:order_id>')
 def get_order_id(order_id):
     # 参数类型，默认是字符串，Unicode 编码
@@ -71,7 +71,7 @@ def get_order_id(order_id):
 
 # 4. 启动程序
 if __name__ == '__main__':
-    # 执行了 app.run 就会将 Flask 程序运行在一个简易的服务器(Flask 提供的，用于测试的)
+    # 执行了 app.run 就会将 Flask 程序运行在一个简易的服务器 (Flask 提供的，用于测试的)
     app.run()
 
 ```

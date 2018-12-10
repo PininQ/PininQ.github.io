@@ -126,4 +126,4 @@ Ctrl+Alt+Shift+O | 通过 Outlook 发送当前文件
 
 
 ### 原文地址
-[notepad++ 快捷键大全、notepad常用快捷键](https://blog.csdn.net/huo_chai_gun/article/details/41826401)
+[notepad++ 快捷键大全、notepad 常用快捷键](https://blog.csdn.net/huo_chai_gun/article/details/41826401)

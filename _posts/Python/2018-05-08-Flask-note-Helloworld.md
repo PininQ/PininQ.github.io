@@ -35,7 +35,7 @@ app = Flask(__name__)
 
 - 装饰器的作用是将路由映射到视图函数 index
 
- 
+
 
 **Flask_Demo.py 文件代码如下**
 ```python
@@ -60,7 +60,7 @@ def index():
 if __name__ == '__main__':
     # 执行了 app.run 就会将 Flask 程序运行在一个简易的服务器 (Flask 提供的，用于测试的)
     app.run()
-    
+
 ```
 
 程序运行结果如下：

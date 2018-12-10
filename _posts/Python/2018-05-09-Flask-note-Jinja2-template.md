@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Flask学习笔记3--Jinja2模板引擎
+title: Flask 学习笔记 3--Jinja2 模板引擎
 categories: Flask
-description: Jinja2模板引擎
+description: Jinja2 模板引擎
 keywords: Python, Flask, Jinja2
 ---
 
@@ -13,7 +13,7 @@ keywords: Python, Flask, Jinja2
 - 模板其实是一个包含响应文本的文件，其中用占位符（变量）表示动态部分，告诉模板引擎其具体的值需要从使用的数据中获取；
 - 使用真实值替换变量，再返回最终得到的字符串，这个过程称为“渲染”
 - Flask 是使用 `Jinja2` 这个模板引擎来渲染模板
- 
+
 
 使用模板的好处：
 
@@ -48,18 +48,18 @@ keywords: Python, Flask, Jinja2
 **变量代码块**
 
 - { { } }来表示变量名，这种语法叫做`变量代码块`
- 
+
 ```
 { { post.title } }
 ```
 
-Jinja2 模板中的变量代码块可以是任意 Python 类型或者对象，只要它能够被 Python 的 str()方法转换为一个字符串就可以，比如，可以通过下面的方式显示一个字典或者列表中的某个元素：
+Jinja2 模板中的变量代码块可以是任意 Python 类型或者对象，只要它能够被 Python 的 str() 方法转换为一个字符串就可以，比如，可以通过下面的方式显示一个字典或者列表中的某个元素：
 
 ```
 { { your_dict['key'] } }
 { { your_list[0] } }
  ```
- 
+
 **控制代码块**
 - 用 { % % } 定义的 ` 控制代码块 `，可以实现一些语言层次的功能，比如循环或者 if 语句
 

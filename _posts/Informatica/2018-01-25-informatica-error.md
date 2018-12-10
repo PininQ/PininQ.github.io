@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Informatica常见错误汇总
+title: Informatica 常见错误汇总
 categories: Informatica
-description: Informatica常见错误汇总
+description: Informatica 常见错误汇总
 keywords: Informatica
 ---
 
@@ -41,10 +41,10 @@ ALTER TABLE QB_TEST02_PRODUCT DROP UNUSED COLUMNS;
 
 **6. 运行 workflow 时，在 log 中出现如下错误：**
 
-        
+
 ```sql
 SQL Error[FnName:Prepare -- [Sybase][ODBC Driver][Sybase IQ]Table '表名' not found]
-``` 
+```
 
 **解决方法**：在 mapping 中，给只是用了数据源中部分字段的 SQ 组件添加 select 语句就可以解决问题了。
 

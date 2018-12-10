@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flask学习笔记4--过滤器的基本使用
+title: Flask 学习笔记 4-- 过滤器的基本使用
 categories: Flask
 description: 过滤器的基本使用
 keywords: Python, Flask, 过滤器

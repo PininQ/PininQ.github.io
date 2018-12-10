@@ -26,11 +26,11 @@ keywords: Python, Django
 4. 配置数据库：
 
    - 修改 `__init__.py` 文件
- 
+
    - 修改 `setting.py` 文件中的 `DATABASES`
- 
+
 5. 创建模型类：在项目目录下的 `model.py` 文件中
- 
+
 6. 生成迁移文件：执行 `python manage.py makemigrations`
 
 7. 执行迁移：执行 `python manage.py migrate`
@@ -38,7 +38,7 @@ keywords: Python, Django
 8. 配置站点
 
 9. 创建模板目录 / 项目模板目录
- 
+
 10. 在 `setting.py` 文件中 `TEMPLATES` 配置模板路径
 
 11. 在 `project` 目录下修改 `urls.py`

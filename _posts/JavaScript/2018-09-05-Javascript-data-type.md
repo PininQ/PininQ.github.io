@@ -38,7 +38,7 @@ object(Function、Array、Date、...) 属于对象类型
 
 JavaScript 和其它编程语言一样有进行类型转换的能力。
 
-- 通过 “+” 号或 toString()方法将数值转换成字符串
+- 通过 “+” 号或 toString() 方法将数值转换成字符串
 
 - 通过 parseInt() 将字符串转换成整形
 
