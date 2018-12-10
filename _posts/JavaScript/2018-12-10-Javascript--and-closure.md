@@ -38,7 +38,7 @@ console.log(fn.prototype) // fn {}
 console.log(obj.__proto__ === Object.prototype) // true
 ```
 
-- 当试图得到一个对象的某个属性时，如果这个对象b本身没有这个属性，那么会去它的 `__proto__` （即它的构造函数的 `prototype`）中寻找。
+- 当试图得到一个对象的某个属性时，如果这个对象 b 本身没有这个属性，那么会去它的 `__proto__` （即它的构造函数的 `prototype`）中寻找。
 
 
 ```js
