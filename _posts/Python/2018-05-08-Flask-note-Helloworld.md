@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flask学习笔记1--Flask程序Hello world例子
+title: Flask 学习笔记 1--Flask 程序 Hello world 例子
 categories: Flask
 description: Hello world
 keywords: Python, Flask
