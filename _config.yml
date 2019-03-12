@@ -99,13 +99,13 @@ gitment:
     repo: blog-comments
     oauth:
         client_id: 92ff8597339ab1695095
-        client_secret: 3e1ff50476682f44f4078264141d3a6905e09a39
+        client_secret: dceeff258a89f54f4ed3a10c828872ab2ebd2507
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: PininQ
     repo: blog-comments
     clientID: 92ff8597339ab1695095
-    clientSecret: 3e1ff50476682f44f4078264141d3a6905e09a39
+    clientSecret: dceeff258a89f54f4ed3a10c828872ab2ebd2507
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
