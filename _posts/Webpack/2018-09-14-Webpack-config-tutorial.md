@@ -14,7 +14,7 @@ keywords: Webpack
 
 要使用 `Webpack` 前须先安装 `Node.js`。`Webpack` 其中一个特性是使用加载器来将资源转化成 `模块`。开发者可以自定义加载器的顺序、格式来因应项目的需求。
 
-![Webpack4-01](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/webpack/webpack-4-quickstart/Webpack4-01.png)
+![Webpack4-01](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/webpack/webpack-4-quickstart/Webpack4-01.png)
 
 从图中可以看出，`Webpack` 可以将多种静态资源 js、css、less 转换成一个静态文件，减少了页面的请求。
 
@@ -39,7 +39,7 @@ npm init -y
 ```
 目录会生成一个 `package.json` 文件
 
-![Webpack4-02](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/webpack/webpack-4-quickstart/Webpack4-02.png)
+![Webpack4-02](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/webpack/webpack-4-quickstart/Webpack4-02.png)
 
 
 安装 `Webpack4`（其中的 `i` 是简化的 `install`,`--save-dev` 可以简化成 `-D`）
@@ -47,14 +47,14 @@ npm init -y
 ```
 npm i webpack --save-dev
 ```
-![Webpack4-03](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/webpack/webpack-4-quickstart/Webpack4-03.png)
+![Webpack4-03](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/webpack/webpack-4-quickstart/Webpack4-03.png)
 
 `Webpack4.x` 需要额外安装 `webpack-cli`
 
 ```
 npm i webpack-cli --save-dev
 ```
-![Webpack4-04](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/webpack/webpack-4-quickstart/Webpack4-04.png)
+![Webpack4-04](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/webpack/webpack-4-quickstart/Webpack4-04.png)
 
 
 打开 `package.json` 添加构建脚本
@@ -72,7 +72,7 @@ npm run build
 ```
 ERROR in Entry module not found: Error: Can't resolve'./src'in'H:\webCode\webpack\webpack-4-quickstart'
 ```
-![Webpack4-05](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/webpack/webpack-4-quickstart/Webpack4-05.png)
+![Webpack4-05](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/webpack/webpack-4-quickstart/Webpack4-05.png)
 
 webpack 4 需要在./src 目录下找一个入口文件！
 
@@ -93,7 +93,7 @@ console.log("Hello Webpack");
 npm run build
 ```
 
-![Webpack4-06](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/webpack/webpack-4-quickstart/Webpack4-06.png)
+![Webpack4-06](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/webpack/webpack-4-quickstart/Webpack4-06.png)
 
 在 `~/webpack-4-quickstart/dist/main.js` 得到你打包后的文件。
 
@@ -116,7 +116,7 @@ npm run build
 
 实际上如果你关注过 `npm run build` 的输出信息你会看到这个警告：
 
-![Webpack4-07](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/webpack/webpack-4-quickstart/Webpack4-07.png)
+![Webpack4-07](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/webpack/webpack-4-quickstart/Webpack4-07.png)
 
 > The 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'productoduction' to enable defaults for each environment.
 

@@ -49,7 +49,7 @@ JavaScript 和其它编程语言一样有进行类型转换的能力。
 
 ### + 和 -
 
-![Javascript-Data-Type-02](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-Data-Type-01.png)
+![Javascript-Data-Type-02](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-Data-Type-01.png)
 
 ```javascript
 "45" + 45  // 字符串拼接，结果为 4545
@@ -123,7 +123,7 @@ typeof(null)   // object，
 
 **实例：**
 
-![Javascript-Data-Type-02](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-Data-Type-02.png)
+![Javascript-Data-Type-02](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-Data-Type-02.png)
 
 - **Object.prototype.toString**
 

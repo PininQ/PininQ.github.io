@@ -1,6 +1,6 @@
 # 小花椒
 
-我的个人博客：<https://pininq.github.io>，欢迎 Star 和 Fork。
+我的个人博客：<https://PininQ.github.io>，欢迎 Star 和 Fork。
 
 ## 概览
 
@@ -16,9 +16,9 @@
 
 ## 效果预览
 
-**[在线预览 &rarr;](https://pininq.github.io)**
+**[在线预览 &rarr;](https://PininQ.github.io)**
 
-![screenshot home](https://pininq.github.io/assets/images/screenshots/home.png)
+![screenshot home](https://PininQ.github.io/assets/images/screenshots/home.png)
 
 ## Fork 指南
 

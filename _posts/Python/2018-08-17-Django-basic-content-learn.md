@@ -92,6 +92,6 @@ keywords: Python, Django
 
 
 
-Django 简单项目链接：[https://github.com/pininq/django-learn/tree/master/project](https://github.com/pininq/django-learn/tree/master/project)
+Django 简单项目链接：[https://github.com/PininQ/django-learn/tree/master/project](https://github.com/PininQ/django-learn/tree/master/project)
 
 

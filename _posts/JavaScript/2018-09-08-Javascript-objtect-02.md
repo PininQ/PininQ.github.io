@@ -131,7 +131,7 @@ obj.z; // 1
 ```
 对应的结构如下：
 
-![Javascript-object-10](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-10.png)
+![Javascript-object-10](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-10.png)
 
 访问对象原型链上 `writable` 为 `false` 的属性时也是不可写的，此时也需要用 `Object.defineProperty()` 方法来给对象添加属性 `writable`、`configurable` 并且设置为 `true`。
 
@@ -312,7 +312,7 @@ person.luck; // "good"
 
 属性的标签可以通过 `Object.defineProperty()` 方法重复设置
 
-![Javascript-object-11](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-11.png)
+![Javascript-object-11](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-11.png)
 
 由上表可知，
 
@@ -328,7 +328,7 @@ person.luck; // "good"
 
 也就是说一旦把属性定义为不可配置的，就不能再把它变回可配置了。此时再调用 `Object.defineProperty()` 方法修改除 `writable` 之外的特性，都会报错。如下图
 
-![Javascript-object-12](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-12.png)
+![Javascript-object-12](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-12.png)
 
 ## 三、对象标签
 
@@ -339,7 +339,7 @@ person.luck; // "good"
 
 `Object.prototype` 的 `__proto__ ` 属性是一个访问器属性（一个 `getter` 函数和一个 `setter` 函数）, 暴露了通过它访问的对象的内部 `[[Prototype]]`  (一个对象或 `null`)。
 
-![Javascript-object-13](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-13.png)
+![Javascript-object-13](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-13.png)
 
 ### 2. [[class]]
 

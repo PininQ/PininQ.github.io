@@ -64,7 +64,7 @@ obj.x = 1;
 ```
 以上代码对应的属性的结构：
 
-![Javascript-object-01](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-01.png)
+![Javascript-object-01](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-01.png)
 
 #### 2. 对象的原型
 
@@ -80,7 +80,7 @@ var obj =new foo();
 ```
 上面这段代码对象 obj 的结构如下：
 
-![Javascript-object-02](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-02.png)
+![Javascript-object-02](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-02.png)
 
 #### 3. 对象的标签
 
@@ -92,7 +92,7 @@ var obj =new foo();
 
 一个对象完整的结构如下：
 
-![Javascript-object-09](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-09.png)
+![Javascript-object-09](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-09.png)
 
 ## 二、创建对象和原型链
 
@@ -124,7 +124,7 @@ function foo(){}
 foo.prototype.z = 3;
 ```
 
-![Javascript-object-03](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-03.png)
+![Javascript-object-03](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-03.png)
 
 使用 new 构造一个新的对象 obj，添加两个属性并赋值。
 
@@ -135,7 +135,7 @@ obj.x = 1;
 ```
 使用 new 来构造对象，它的原型会指向构造器的 **prototype** 属性，也就是 **foo.prototype**。
 
-![Javascript-object-04](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-04.png)
+![Javascript-object-04](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-04.png)
 
 
 ```javascript
@@ -154,7 +154,7 @@ typeof obj.toString; // 'function', 原型链的末端有一个 Object.prototype
 obj.hasOwnProperty('z'); // false, 对象 obj 没有属性'z'
 ```
 
-![Javascript-object-05](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-05.png)
+![Javascript-object-05](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-05.png)
 
 作用：通过原型链继承，继承原型上的属性和方法。
 
@@ -176,7 +176,7 @@ obj.hasOwnProperty('x'); // false
 ```
 对应的结构为：
 
-![Javascript-object-06](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-06.png)
+![Javascript-object-06](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-06.png)
 
 使用 `字面量` 创建的对象的原型指向 `Object.prototype`，所以在 `obj` 对象上可以调用 `obj.toString()` 方法。
 
@@ -192,7 +192,7 @@ obj.toString // undefined
 ```
 对应的结构为：
 
-![Javascript-object-07](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-07.png)
+![Javascript-object-07](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-07.png)
 
 ## 三、属性操作
 
@@ -236,7 +236,7 @@ for (p in obj) {
     console.log(obj[p]);
 }
 ```
-![Javascript-object-08](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-08.png)
+![Javascript-object-08](https://raw.githubusercontent.com/PininQ/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-object-08.png)
 
 ### 2. 属性读写 - 异常
 

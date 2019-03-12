@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://pininq.github.io/
+url: https://PininQ.github.io/
 date_format: "ordinal"
 title: "小花椒"
 subtitle: "三旬尚远浓烟散，一如年少迟夏归。"
@@ -18,7 +18,7 @@ side_bar_repo_limit: 5
 author: Bin Qin
 organization: "小花椒视频网站"
 organization_url: https://www.xhuajiao.top
-github_username: pininq
+github_username: PininQ
 location: Guangzhou, China
 email: 2538323140@qq.com
 
@@ -81,7 +81,7 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: pininq/pininq.github.io
+repository: PininQ/PininQ.github.io
 
 # ---------------- #
 #      Comments    #
@@ -95,14 +95,14 @@ disqus:
     username:
 # https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: pininq
+    owner: PininQ
     repo: blog-comments
     oauth:
         client_id: 92ff8597339ab1695095
         client_secret: 3e1ff50476682f44f4078264141d3a6905e09a39
 # https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: pininq
+    owner: PininQ
     repo: blog-comments
     clientID: 92ff8597339ab1695095
     clientSecret: 3e1ff50476682f44f4078264141d3a6905e09a39
