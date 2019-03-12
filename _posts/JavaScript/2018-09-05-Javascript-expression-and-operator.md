@@ -37,7 +37,7 @@ JavaScript 的原始表达式包含常量或直接量、关键字和变量。
 ```
 原始表达式和原始表达式之间可以复合成复合表达式。
 
-![Javascript-expression-and-operator-01](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-expression-and-operator-01.png)
+![Javascript-expression-and-operator-01](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-expression-and-operator-01.png)
 
 ### 初始化表达式
 
@@ -100,7 +100,7 @@ new Object;
 
 ## 运算符
 
-![Javascript-expression-and-operator-02](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-expression-and-operator-02.png)
+![Javascript-expression-and-operator-02](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/Javascript-Data-Type/Javascript-expression-and-operator-02.png)
 
 
 ### 运算符 ? :

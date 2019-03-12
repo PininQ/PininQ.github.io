@@ -36,5 +36,5 @@ keywords: Windows PowerShell git bash
 
 抛弃  `Windows PowerShell` 转投 `git bash` 怀抱了😅
 
-![Windows PowerShell](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/blog/windows-powershell.png)
+![Windows PowerShell](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/blog/windows-powershell.png)
 

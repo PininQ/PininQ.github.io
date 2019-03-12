@@ -70,7 +70,7 @@ console.table([
 
 结果如下：
 
-![ES6-01](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/ES6/ES6-01.png)
+![ES6-01](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/ES6/ES6-01.png)
 
 #### 2. ES6 中的作用域
 
@@ -94,7 +94,7 @@ console.table([
 
 结果如下：
 
-![ES6-02](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/ES6/ES6-02.png)
+![ES6-02](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/ES6/ES6-02.png)
 
 #### 3. ES5 中的块作用域
 
@@ -412,7 +412,7 @@ try {
 }
 ```
 
-![ES6-03](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/ES6/ES6-03.png)
+![ES6-03](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/ES6/ES6-03.png)
 
 #### 2. ES5 数据保护
 
@@ -459,7 +459,7 @@ try {
 }
 ```
 
-![ES6-04](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/ES6/ES6-04.png)
+![ES6-04](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/ES6/ES6-04.png)
 
 
 #### 3. ES6 对象代理
@@ -503,7 +503,7 @@ try {
 }
 ```
 
-![ES6-05](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Javascript/ES6/ES6-05.png)
+![ES6-05](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Javascript/ES6/ES6-05.png)
 
 ## 三、ES6 入门书籍
 

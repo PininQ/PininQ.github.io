@@ -88,7 +88,7 @@ keywords: Vue, 组件
 
 结果如下，
 
-![Vue-component-use-details-01](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Vue/Vue-component-use-details/Vue-component-use-details-01.png)
+![Vue-component-use-details-01](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Vue/Vue-component-use-details/Vue-component-use-details-01.png)
 
 看样子，结果出错了。一切并未如我们所预料的那样，子组件的内容渲染在 table 标签中。
 
@@ -125,7 +125,7 @@ keywords: Vue, 组件
 
 使用 `is` 属性后的结果如下：
 
-![Vue-component-use-details-02](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Vue/Vue-component-use-details/Vue-component-use-details-02.png)
+![Vue-component-use-details-02](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Vue/Vue-component-use-details/Vue-component-use-details-02.png)
 
 在 `tbody` 中，要使用一个组件，但是不能直接写组件的名字，可以使用 `is` 属性，虽然写的是 `tr`，
 但是实际上它是一个 `row` 的组件。
@@ -178,7 +178,7 @@ div 标签中使用 ref 的代码如下：
 
 执行结果如下：
 
-![Vue-component-use-details-03](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Vue/Vue-component-use-details/Vue-component-use-details-03.png)
+![Vue-component-use-details-03](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Vue/Vue-component-use-details/Vue-component-use-details-03.png)
 
 可以看到，在 div 这样的元素标签上使用 ref，通过 `this.$refs.ref` 获取到这个引用的时候，获取到的是一个 DOM 元素
 
@@ -235,7 +235,7 @@ div 标签中使用 ref 的代码如下：
 
 结果如下：
 
-![Vue-component-use-details-04](https://raw.githubusercontent.com/qinbin52qiul/MarkdownPhotos/master/Vue/Vue-component-use-details/Vue-component-use-details-04.gif)
+![Vue-component-use-details-04](https://raw.githubusercontent.com/pininq/MarkdownPhotos/master/Vue/Vue-component-use-details/Vue-component-use-details-04.gif)
 
 小结：
 - 当在 `div 标签` 上使用 ref 的时候，通过 `this.$refs.ref` 获取到的是标签对应的 DOM
